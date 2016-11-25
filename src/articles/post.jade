@@ -1,0 +1,26 @@
+extends ../assets/jade/html.jade
+
+block variables
+  //- should only need to change the id in the articles array
+  - var article = articles[0];
+  - var pagetitle = article.title;
+  - var tweetQuote = true;
+  - var metaData = { contenttitle: article.title, url: site.baseurl + article.link, image: site.baseurl + '/assets/img/dunamaise-mobile.JPG', author: site.authors.harry, description: article.intro, twitter_large: true};
+
+block content
+
+  div.individual-article
+
+    +postinfo(article.date, article.categories)
+
+    h1 #{pagetitle}
+
+    p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe tempora ut accusantium at, laudantium sit repudiandae, enim nostrum aliquid non pariatur, placeat odio laboriosam hic a vitae quaerat quia. Corporis.
+
+    +image('/assets/img/work/aerlingus.png', 'Aer Lingus', true)
+
+    p  Lorem porttitor! Dictumst turpis sociis egestas, ac cras. Dictumst aenean pulvinar, porttitor, dignissim rhoncus, hac, habitasse magnis lectus augue eu, enim aenean dignissim tincidunt, nunc egestas nunc aliquet, odio, dis tincidunt turpis sed scelerisque, arcu et, aliquam enim pulvinar tempor velit tincidunt, duis nascetur, pulvinar rhoncus nascetur ultricies, et dignissim pid? Etiam, ut elit et odio nisi ut dignissim? Est quis lundium nisi, rhoncus! Porta, diam lorem in porta nunc, augue dignissim, lundium pellentesque lectus? Scelerisque turpis non aliquet arcu et urna a velit urna, montes turpis aenean augue nisi? Ac! Eu, aliquam lundium arcu nec! Scelerisque platea tincidunt mauris odio quis velit, sit mattis magna lectus arcu, tristique odio. Cursus, pellentesque in turpis porta nec? Augue natoque turpis, odio.
+
+    p Nisi dis sed purus sit ac tortor? Lacus placerat? Parturient, hac? Porttitor duis nunc? Lacus dictumst hac, lacus sociis, ridiculus ultrices ac in, nisi sociis sagittis. Platea. Integer cras, arcu in hac quis. Sed odio. Mus mattis lacus amet. Ac placerat facilisis habitasse tristique! Ultricies montes! Tincidunt hac scelerisque ridiculus adipiscing proin in integer? Nisi turpis in, nec ridiculus? Adipiscing rhoncus dapibus pulvinar! Hac sed proin! Phasellus aenean. Augue cum mus, dis, enim enim in augue eros, duis. In dis et vel, rhoncus turpis dis integer urna elementum lectus facilisis? Nec enim, integer sed adipiscing. Lundium magna auctor cras, parturient parturient? Porttitor aenean nisi dis mid dictumst, hac ultricies penatibus scelerisque mus auctor phasellus sociis! In eros nec parturient.
+
+    +author(metaData.author)

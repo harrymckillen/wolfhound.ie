@@ -1,0 +1,14 @@
+// wolfhound variables
+@import 'components/variables';
+
+// alternate theme
+$mainBackgroundColour: $white;
+$secondaryBackgroundColour: $lightgray;
+$primaryForegroundColour: $black;
+$secondaryForegroundColour: $gray;
+$menuForegroundColour: $white;
+$linkHoverBackgroundColour: $navy;
+$formDropdownBackgroundColour: $white;
+$formDropdownForegroundColour: $navy;
+
+@import 'wolfhound';

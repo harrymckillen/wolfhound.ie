@@ -1,0 +1,12 @@
+extends ../jade/html.jade
+
+block variables
+  - var pagetitle = '404 - Page Not Found';
+  - var footerHidden = true;
+
+block content
+  h1 #{pagetitle}
+  p We couldn't find the page you're looking for.
+
+  +error-page-form('404')
+

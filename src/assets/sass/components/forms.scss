@@ -1,0 +1,102 @@
+// forms
+
+label {
+  display: block;
+  padding: 0.3em 0 0.5em 0;
+}
+
+input[type="text"], input[type="password"], input[type="email"], textarea, select {
+  width: 100%;
+  color: $primaryForegroundColour;
+  padding: 0.4em 0.6em;
+  outline: 0;
+  font-family: $body-font;
+  border:0;
+  border-bottom: 2px solid rgba($primaryForegroundColour,1);
+  background: rgba($primaryForegroundColour, 0.2);
+  cursor: pointer;
+  &.valid-field {
+    background: rgba($green, 0.5);
+    border-bottom: 2px solid rgba($green,1);
+  }
+  &.invalid-field {
+    background: rgba($red, 0.5);
+    border-bottom: 2px solid rgba($red,1);
+  }
+  @include transition(all 0.2s linear);
+
+  &::-webkit-input-placeholder {
+    color: rgba($primaryForegroundColour, 0.5);
+    opacity:  1;
+  }
+  &:-moz-placeholder {
+    color: rgba($primaryForegroundColour, 0.5);
+    opacity:  1;
+  }
+  &::-moz-placeholder {
+    color: rgba($primaryForegroundColour, 0.5);
+    opacity:  1;
+  }
+  &:-ms-input-placeholder {
+    color: rgba($primaryForegroundColour, 0.5);
+    opacity:  1;
+  }
+
+  // &:hover, &:focus, &:active {
+  // &:hover, &:focus{
+  &:focus{
+    color: $mainBackgroundColour;
+    background: $primaryForegroundColour;
+    &::-webkit-input-placeholder {
+      color: rgba($mainBackgroundColour, 0.5);
+      opacity:  1;
+    }
+    &:-moz-placeholder {
+      color: rgba($mainBackgroundColour, 0.5);
+      opacity:  1;
+    }
+    &::-moz-placeholder {
+      color: rgba($mainBackgroundColour, 0.5);
+      opacity:  1;
+    }
+    &:-ms-input-placeholder {
+      color: rgba($mainBackgroundColour, 0.5);
+      opacity:  1;
+    }
+  }
+}
+
+input[type="radio"], input[type="checkbox"] {
+  float: left;
+  display: block;
+  margin: 10px 10px 6px 0;
+}
+
+select{
+  option {
+    background: $formDropdownBackgroundColour;
+    color: $formDropdownForegroundColour;
+  }
+}
+
+textarea{
+  height:150px;
+  resize: none;
+}
+
+.real-important-field {
+  display: none !important;
+  height: 0;
+}
+
+.error-message {
+  background: rgba($red, 1);
+  color: $white;
+  padding: $std-padding $std-padding*2;
+}
+
+.success-message {
+  background: rgba($green, 1);
+  color: $white;
+  padding: $std-padding $std-padding*2;
+}

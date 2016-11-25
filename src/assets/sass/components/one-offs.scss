@@ -1,0 +1,110 @@
+// home page text
+.title-text {
+  span {
+    line-height: 1em;
+    text-rendering: optimizeLegibility;
+    font-family: $header-font;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+
+    @include superwide {
+      font-size: 8.2vw;
+    }
+    @include desktop {
+      font-size: 10vw;
+    }
+    @include tablet {
+      font-size: 13vw;
+    }
+
+    @if $shadow {
+      text-shadow: 0px 0px 3px $black;
+    }
+
+    &.mediadesign {
+      font-weight: normal;
+      display: block;
+
+      @include superwide {
+        font-size: 4.5vw;
+      }
+      @include desktop {
+        font-size: 6.5vw;
+      }
+      @include tablet {
+        font-size: 8vw;
+      }
+    }
+  }
+}
+
+// legacy overlay for < IE9 browsers
+.legacy {
+    background-color: $mainBackgroundColour;
+    display: block;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    zoom: 1;
+}
+
+// Cookie Warning Banner
+[cookie-warning] {
+  width: 100%;
+  .cookie-warning {
+    background-color: rgba($black, 0.9);
+    span {
+      width: 75%;
+      @include tablet {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Quote Selection Tooltip
+.quoteTooltip {
+
+  &:before{
+    position: absolute;
+    content: "";
+    display: block;
+    background: $primaryForegroundColour;
+    width: $std-padding*2;
+    height: $std-padding*2;
+    left: 50%;
+    margin-left: -$std-padding;
+    transform: rotate(45deg);
+  }
+
+  &.bottom{
+    &:before{
+      bottom: -$std-padding;
+    }
+  }
+  &.top{
+    &:before{
+      top: -$std-padding;
+    }
+  }
+
+  background: $primaryForegroundColour;
+  color: $mainBackgroundColour;
+  width: $std-padding*10;
+  height: $std-padding*10;
+  position: absolute;
+  border-radius: $std-padding;
+
+  a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: $mainBackgroundColour;
+    display: block;
+    text-align: center;
+    line-height: $std-padding*10;
+  }
+}

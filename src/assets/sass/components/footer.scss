@@ -1,0 +1,17 @@
+.footer{
+  padding: 1em 0;
+  text-align: center;
+  &.anchor{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+
+  span {
+    font-family: 'WMD Logo';
+    font-size: 1.4em;
+  }
+  .copyright {
+    font-size: 0.6em;
+  }
+}

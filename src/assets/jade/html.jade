@@ -1,0 +1,18 @@
+block variables
+
+doctype html
+html(lang="en" dir="ltr" ng-app="wolfhound.app")
+
+  include mixins.jade
+
+  head
+    include partials/head.jade
+    block head
+
+  if pageClassName
+    body(class="#{pageClassName} ng-cloak")
+      include partials/body.jade
+
+  else
+    body(class="ng-cloak")
+      include partials/body.jade

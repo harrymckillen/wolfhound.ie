@@ -1,0 +1,5 @@
+mixin postinfo(postdate, categories)
+  div.postinfo
+    span(ng-bind="#{postdate} | date:'LLLL dd, yyyy'")
+    span.middot &middot;
+    span #{categories}

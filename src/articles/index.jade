@@ -1,0 +1,13 @@
+extends ../assets/jade/html.jade
+
+block variables
+  - var pagetitle = 'Articles';
+  - var metaData = { contenttitle: pagetitle, url: site.baseurl + '/articles/', image: site.baseurl + '/assets/img/dunamaise-mobile.JPG', author: site.authors.harry, description: 'A list of articles I have written.'};
+
+block content
+  h1 #{pagetitle}
+
+  p  My opinions on anything, from development, UX problems, latest tech tools, or on simply working as part of a team.
+
+  +articles(articles)
+

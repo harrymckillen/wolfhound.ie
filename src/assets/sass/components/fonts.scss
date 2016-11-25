@@ -1,0 +1,212 @@
+// montserrat font
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../font/Montserrat-regular/Montserrat-regular.eot');
+  src: url('../font/Montserrat-regular/Montserrat-regular.eot?#iefix') format('embedded-opentype'),
+       local('Montserrat-Regular'),
+       local('Montserrat-regular'),
+       url('../font/Montserrat-regular/Montserrat-regular.woff2') format('woff2'),
+       url('../font/Montserrat-regular/Montserrat-regular.woff') format('woff'),
+       url('../font/Montserrat-regular/Montserrat-regular.ttf') format('truetype'),
+       url('../font/Montserrat-regular/Montserrat-regular.svg#Montserrat') format('svg');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../font/Montserrat-700/Montserrat-700.eot');
+  src: url('../font/Montserrat-700/Montserrat-700.eot?#iefix') format('embedded-opentype'),
+       local('Montserrat-Bold'),
+       local('Montserrat-700'),
+       url('../font/Montserrat-700/Montserrat-700.woff2') format('woff2'),
+       url('../font/Montserrat-700/Montserrat-700.woff') format('woff'),
+       url('../font/Montserrat-700/Montserrat-700.ttf') format('truetype'),
+       url('../font/Montserrat-700/Montserrat-700.svg#Montserrat') format('svg');
+}
+
+// lora font
+@font-face {
+  font-family: 'Lora';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../font/Lora-regular/Lora-regular.eot');
+  src: url('../font/Lora-regular/Lora-regular.eot?#iefix') format('embedded-opentype'),
+       local('Lora'),
+       local('Lora-regular'),
+       url('../font/Lora-regular/Lora-regular.woff2') format('woff2'),
+       url('../font/Lora-regular/Lora-regular.woff') format('woff'),
+       url('../font/Lora-regular/Lora-regular.ttf') format('truetype'),
+       url('../font/Lora-regular/Lora-regular.svg#Lora') format('svg');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../font/Lora-700/Lora-700.eot');
+  src: url('../font/Lora-700/Lora-700.eot?#iefix') format('embedded-opentype'),
+       local('Lora Bold'),
+       local('Lora-700'),
+       url('../font/Lora-700/Lora-700.woff2') format('woff2'),
+       url('../font/Lora-700/Lora-700.woff') format('woff'),
+       url('../font/Lora-700/Lora-700.ttf') format('truetype'),
+       url('../font/Lora-700/Lora-700.svg#Lora') format('svg');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-weight: 400;
+  font-style: italic;
+  src: url('../font/Lora-italic/Lora-italic.eot');
+  src: url('../font/Lora-italic/Lora-italic.eot?#iefix') format('embedded-opentype'),
+       local('Lora Italic'),
+       local('Lora-italic'),
+       url('../font/Lora-italic/Lora-italic.woff2') format('woff2'),
+       url('../font/Lora-italic/Lora-italic.woff') format('woff'),
+       url('../font/Lora-italic/Lora-italic.ttf') format('truetype'),
+       url('../font/Lora-italic/Lora-italic.svg#Lora') format('svg');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-weight: 700;
+  font-style: italic;
+  src: url('../font/Lora-700italic/Lora-700italic.eot');
+  src: url('../font/Lora-700italic/Lora-700italic.eot?#iefix') format('embedded-opentype'),
+       local('Lora Bold Italic'),
+       local('Lora-700italic'),
+       url('../font/Lora-700italic/Lora-700italic.woff2') format('woff2'),
+       url('../font/Lora-700italic/Lora-700italic.woff') format('woff'),
+       url('../font/Lora-700italic/Lora-700italic.ttf') format('truetype'),
+       url('../font/Lora-700italic/Lora-700italic.svg#Lora') format('svg');
+}
+
+// wolfhound logo font
+@font-face {
+    font-family: 'WMD Logo';
+    src: url('../font/wmd_logo-webfont.eot');
+    src: url('../font/wmd_logo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/wmd_logo-webfont.woff') format('woff'),
+         url('../font/wmd_logo-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// default font family declarations
+body{
+  font-family: $body-font;
+  font-size:1.2em;
+  line-height: 1.5em;
+
+  h1, h2, h3, h4, h5, h6{
+    font-family: $header-font;
+    line-height: 1.2em;
+  }
+  h1 {
+    font-size: 2.2em;
+  }
+  h2 {
+    font-size: 1.7em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  h4 {
+    font-size: 1.4em;
+  }
+  h5 {
+    font-size: 1.2em;
+  }
+  h6 {
+    font-size: 1.0em;
+  }
+}
+
+// font family classes
+.header-font{
+  font-family: $header-font;
+}
+
+.body-font {
+  font-family: $body-font;
+}
+
+.wmd-font {
+  font-family: $wmd-font;
+}
+
+
+
+// font sizes
+.font-xxxl {
+  font-size: 9em;
+}
+.font-xxl {
+  font-size: 7em;
+}
+.font-xl {
+  font-size: 4em;
+}
+.font-l {
+  font-size: 2em;
+}
+.font-m {
+  font-size: 1.5em;
+}
+.font-n {
+  font-size: 1em;
+}
+.font-s {
+  font-size: 0.8em;
+}
+
+// font transforms
+.uppercase{
+  text-transform: uppercase;
+}
+.lowercase{
+  text-transform: lowercase;
+}
+.titlecase{
+  text-transform: capitalize;
+}
+
+// font style
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-weight: italic;
+}
+
+// font align
+.align-center {
+  text-align: center;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+
+
+// 3d drop shadow
+.drop-shadow-11px{
+  text-shadow:
+    1px 1px 1px darken( $softred, 5% ),
+    2px 2px 1px darken( $softred, 5% ),
+    3px 3px 1px darken( $softred, 5% ),
+    4px 4px 1px darken( $softred, 5% ),
+    5px 5px 1px darken( $softred, 5% ),
+    6px 6px 1px darken( $softred, 5% ),
+    7px 7px 1px darken( $softred, 5% ),
+    8px 8px 1px darken( $softred, 5% ),
+    9px 9px 1px darken( $softred, 5% ),
+    10px 10px 1px darken( $softred, 5% ),
+    11px 11px 1px darken( $softred, 5% )
+  ;
+}

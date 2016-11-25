@@ -1,0 +1,20 @@
+//- page title
+if pagetitle
+  title #{pagetitle} - #{site.title}
+else
+  title #{site.title}
+
+//- stylesheets
+link(rel="stylesheet" href="/assets/css/main-theme.css")
+//- link(rel="stylesheet" href="css/alt-theme.css")
+
+//- meta data
+include metadata.jade
+
+//- favourite icons
+include favicons.jade
+
+//
+  Interested to see how this was made?
+  Checkout this on github, all the code is there.
+  https://github.com/harrymckillen/wolfhound.ie

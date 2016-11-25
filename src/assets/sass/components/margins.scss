@@ -1,0 +1,109 @@
+// no margins
+
+.no-margins{
+  margin: 0;
+}
+.no-margin-top{
+  margin-top: 0;
+}
+.no-margin-bottom{
+  margin-bottom: 0;
+}
+.no-margin-left{
+  margin-left: 0;
+}
+.no-margin-right{
+  margin-right: 0;
+}
+
+// px margins
+// all
+$i: 5;
+@while $i < 50 {
+  .margin-all-#{$i}px{
+    margin: #{$i}px;
+  }
+  $i: $i + 5;
+}
+
+// left
+$i: 5;
+@while $i < 50 {
+  .margin-left-#{$i}px{
+    margin-left: #{$i}px;
+  }
+  $i: $i + 5;
+}
+
+// right
+$i: 5;
+@while $i < 50 {
+  .margin-right-#{$i}px{
+    margin-right: #{$i}px;
+  }
+  $i: $i + 5;
+}
+
+// top
+$i: 5;
+@while $i < 50 {
+  .margin-top-#{$i}px{
+    margin-top: #{$i}px;
+  }
+  $i: $i + 5;
+}
+
+// bottom
+$i: 5;
+@while $i < 70 {
+  .margin-bottom-#{$i}px{
+    margin-bottom: #{$i}px;
+  }
+  $i: $i + 5;
+}
+
+// em margins
+// all
+$i: 1;
+@while $i < 10 {
+  .margin-all-#{$i}em{
+    margin: #{$i}em;
+  }
+  $i: $i + 1;
+}
+
+// left
+$i: 1;
+@while $i < 10 {
+  .margin-left-#{$i}em{
+    margin-left: #{$i}em;
+  }
+  $i: $i + 1;
+}
+
+// right
+$i: 1;
+@while $i < 10 {
+  .margin-right-#{$i}em{
+    margin-right: #{$i}em;
+  }
+  $i: $i + 1;
+}
+
+// top
+$i: 1;
+@while $i < 10 {
+  .margin-top-#{$i}em{
+    margin-top: #{$i}em;
+  }
+  $i: $i + 1;
+}
+
+// bottom
+$i: 1;
+@while $i < 10 {
+  .margin-bottom-#{$i}em{
+    margin-bottom: #{$i}em;
+  }
+  $i: $i + 1;
+}

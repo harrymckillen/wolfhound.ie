@@ -1,0 +1,10 @@
+/* TEAM */
+    Web Developer:Harry McKillen
+    Twitter: @_hmck
+    From:Kilkenny, Ireland
+
+/* SITE */
+    Last update:2016/09/01
+    Language: English
+    Doctype:HTML5
+    IDE: Sublime Text 3, node.js, Grunt

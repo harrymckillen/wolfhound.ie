@@ -1,0 +1,14 @@
+//- common includes
+include header.jade
+
+article(quote-selection=tweetQuote role="main")
+
+  div(class="the-grid")&attributes(gridSize ? {'class': gridSize} : {'class': 'small'})
+    div.a-row
+      div.a-column.width-1-of-12
+        block content
+
+block footer
+  include footer.jade
+
+include not-supported.jade

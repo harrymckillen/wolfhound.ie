@@ -1,0 +1,16 @@
+[
+  {
+    "date": 1473796996192,
+    "title": "Blah blah blah",
+    "link": "/articles/post.html",
+    "categories": "Opinion",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae hic at harum similique sed quos! Tempore mollitia esse nemo, amet, non inventore autem culpa minus! Laudantium impedit sed dolores? Quae!"
+  },
+  {
+    "date": 1473796996192,
+    "title": "Blah blah blah #2",
+    "link": "/articles/post.html",
+    "categories": "Opinion",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae hic at harum similique sed quos! Tempore mollitia esse nemo, amet, non inventore autem culpa minus! Laudantium impedit sed dolores? Quae!"
+  }
+]
