@@ -70,7 +70,6 @@ article {
 
   .responsive-image {
     position: relative;
-    // margin: 0 0 1.5em 0;
     img {
       display: block;
       width:100%;
@@ -118,6 +117,14 @@ article {
     iframe {
       margin:0 auto;
       display: block;
+    }
+  }
+}
+
+[gallery] {
+  img.gallery-item {
+    &:hover, &:focus {
+      transform: scale(1.04);
     }
   }
 }
