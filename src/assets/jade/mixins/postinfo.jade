@@ -3,3 +3,5 @@ mixin postinfo(postdate, categories)
     span(ng-bind="#{postdate} | date:'LLLL dd, yyyy'")
     span.middot &middot;
     span #{categories}
+    span.middot &middot;
+    span(approx-reading-time) {{approxReadingTime}} mins read
