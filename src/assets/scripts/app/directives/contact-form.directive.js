@@ -55,8 +55,6 @@ angular.module('wolfhound.directives')
             'env': $scope.env
           };
 
-          console.log($scope.submission);
-
           $http.post('/php/contact.php', $scope.submission)
           .success(function (response) {
             if(response.status === 'huzzah'){
@@ -74,7 +72,9 @@ angular.module('wolfhound.directives')
             }
           })
           .error(function () {
-            console.error('Sending the message failed');
+            if(window._gaq){
+              _gaq.push(['_trackEvent', 'Contact Form', 'Error', 'Sending the message failed']);
+            }
           });
         } else {
           angular.forEach($scope.showError, function(value, key) {
