@@ -1,14 +1,17 @@
 {
   "js": [
     "tmp/appjs/scripts/thirdparty/jquery-1.10.2.min.js",
+    "tmp/appjs/scripts/thirdparty/lodash.min.js",
     "tmp/appjs/scripts/thirdparty/angular-1.5.8/angular.min.js",
     "tmp/appjs/scripts/thirdparty/angular-1.5.8/angular-cookies.min.js",
     "tmp/appjs/scripts/thirdparty/angular-1.5.8/angular-touch.min.js",
     "tmp/appjs/scripts/thirdparty/ngtweet.min.js",
     "tmp/appjs/scripts/custom/ga.js",
+    "tmp/appjs/scripts/constants.js",
     "tmp/appjs/scripts/app/modules/wolfhound.app.js",
     "tmp/appjs/scripts/app/modules/wolfhound.controllers.js",
     "tmp/appjs/scripts/app/modules/wolfhound.services.js",
+    "tmp/appjs/scripts/app/services/keyboard-input.service.js",
     "tmp/appjs/scripts/app/modules/wolfhound.directives.js",
     "tmp/appjs/scripts/app/directives/cookie-warning.directive.js",
     "tmp/appjs/scripts/app/directives/menu-button.directive.js",
@@ -16,6 +19,7 @@
     "tmp/appjs/scripts/app/directives/contact-form.directive.js",
     "tmp/appjs/scripts/app/directives/quote-selection.directive.js",
     "tmp/appjs/scripts/app/directives/gallery.directive.js",
+    "tmp/appjs/scripts/app/directives/approx-reading-time.directive.js",
     "tmp/appjs/scripts/app/directives/active-menu-link.directive.js"
   ]
 }
