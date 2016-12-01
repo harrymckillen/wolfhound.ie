@@ -37,7 +37,8 @@ module.exports = function (grunt) {
         files: [
           {expand: true, cwd: 'src/assets/', src: ['scripts/**'], dest: 'tmp/appjs/'},
           {expand: true, cwd: 'src/assets/', src: ['font/**', 'img/**'], dest: 'build/assets/'},
-          {expand: true, cwd: 'src/', src: ['php/**', '.htaccess', '*.txt', 'favicon.ico'], dest: 'build/'}
+          {expand: true, cwd: 'src/', src: ['php/**', '.htaccess', '*.txt', 'favicon.ico'], dest: 'build/'},
+          {expand: true, cwd: 'json/', src: ['articles.json'], dest: 'build/assets/json/'}
         ]
       }
     },
