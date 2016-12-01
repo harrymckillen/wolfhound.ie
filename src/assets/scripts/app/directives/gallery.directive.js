@@ -6,11 +6,12 @@ angular.module('wolfhound.directives')
   return {
     restrict: 'A',
     link: function (scope, elem, attr){
+
       // local variables
       var images = document.getElementsByTagName('img');
       var galleryItems = [];
 
-
+      var keymap = _.clone(window.constants.keymap || {});
 
       //get a list of all images, and add ngClick directive to each
       for(var i = 0; i < images.length; i++) {
@@ -20,7 +21,7 @@ angular.module('wolfhound.directives')
           image: images[i].getAttribute('image')
         }
         galleryItems.push(galleryObject);
-        angular.element(images[i]).attr("ng-click", "openGalleryItem("+i+")").addClass("cursor");
+        angular.element(images[i]).attr({"ng-click":"openGalleryItem("+i+")", "ng-keypress":"openGalleryItem("+i+")", "tabindex": 0}).addClass("cursor gallery-item");
         $compile(images[i])(scope);
       }
 
@@ -64,12 +65,18 @@ angular.module('wolfhound.directives')
       $document.bind('keypress keydown', function(event) {
 
         if(scope.showGallery){
-          if(event.which === 37) {
+          event.preventDefault();
+
+          if(event.which === keymap.left || event.which === keymap.down) {
             scope.openGalleryItem(getPrevImage(scope.currentGalleryImage));
           }
-          if(event.which === 39) {
+          if(event.which === keymap.right || event.which === keymap.up) {
             scope.openGalleryItem(getNextImage(scope.currentGalleryImage));
           }
+          if(event.which === keymap.esc) {
+            scope.closeGallery();
+          }
+
         }
         scope.$apply();
       });
