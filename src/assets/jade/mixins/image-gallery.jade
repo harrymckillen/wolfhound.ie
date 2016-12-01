@@ -1,5 +1,5 @@
 mixin image-gallery
-  div.image-gallery(ng-if="showGallery" ng-swipe-left="openGalleryItem(prevGalleryImage)" ng-swipe-right="openGalleryItem(nextGalleryImage)")
+  div.image-gallery(ng-if="showGallery" ng-swipe-left="openGalleryItem(nextGalleryImage)" ng-swipe-right="openGalleryItem(prevGalleryImage)")
     button.ghost-button.close-button(ng-click="closeGallery()" aria-label="Close")
       span.icon-cancel
 
