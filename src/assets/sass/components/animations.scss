@@ -1,6 +1,6 @@
 .grow{
   @include transition(all 0.2s linear);
-  &:hover {
-      transform: scale(1.2);
+  &:hover, &:focus, &:active {
+      @include transform(scale(1.2));
   }
 }
