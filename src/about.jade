@@ -2,12 +2,12 @@ extends assets/jade/html.jade
 
 block variables
   - var pagetitle = 'About';
-  - var metaData = { contenttitle: pagetitle, url: site.baseurl + '/about.html', image: site.baseurl + '/assets/img/dunamaise-mobile.JPG', author: site.authors.harry, description: 'All about me.'};
+  - var metaData = { contenttitle: pagetitle, url: site.baseurl + '/about.html', image: site.baseurl + site.defaultThumbnail, author: site.authors.harry, description: 'All about me.'};
 
 block content
   h1 #{pagetitle}
 
-  p My name is Harry, I currently work for the <a href="https://www.aerlingus.com">Aer Lingus</a> Digital Team as a <em>Senior UI Developer</em>.
+  p My name is Harry, I currently work for the <a href="https://www.aerlingus.com">Aer Lingus</a> Digital Team as the <em>UI Team Lead</em>.
 
   h2 Background
 

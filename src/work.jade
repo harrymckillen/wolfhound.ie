@@ -2,7 +2,7 @@ extends assets/jade/html.jade
 
 block variables
   - var pagetitle = 'Work';
-  - var metaData = { contenttitle: pagetitle, url: site.baseurl + '/work.html', image: site.baseurl + '/assets/img/dunamaise-mobile.JPG', author: site.authors.harry, description: 'Some examples of my work, and a few projects I have done for fun.'};
+  - var metaData = { contenttitle: pagetitle, url: site.baseurl + '/work.html', image: site.baseurl + site.defaultThumbnail, author: site.authors.harry, description: 'Some examples of my work, and a few projects I have done for fun.'};
 
 block content
   h1 #{pagetitle}
