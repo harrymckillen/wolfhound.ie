@@ -111,6 +111,7 @@
 
         &:hover, &:focus, &.active {
           border:2px solid rgba($primaryForegroundColour, 1);
+          outline: 0;
           @if $shadow {
             box-shadow: 0px 0px 3px rgba($black, 0.5), 0px 0px 3px rgba($black, 0.5) inset;
           }
