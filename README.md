@@ -16,23 +16,3 @@ I use a good few of these technologies in work. I have previously always had a W
 ## Why "open source it"?
 
 i.e. Throw it up on github, and claim it is open source... I don't know. I'm effectively using github as a storage solution/CMS. I build and deploy from my local machine, but all the content is in git. 
-
-
-## Page Level Variables
-
-### pageClassName
-Fancy passing in a page specific class name on the <body> tag? Like for example, you want a home page specific class. 
-
-`
-block variables
-  - var pageClassName = 'home'
-`
-
-If you want multiple class names, just add them as a space separated list as you would within the start HTML class attribute.
-`
-block variables
-  - var pageClassName = 'home class-1 class-2 class-3'
-`
-
-### footerHidden
-Simple as, if true, doesn't output the footer.
