@@ -2,15 +2,19 @@ extends assets/jade/html.jade
 
 block variables
   - var pagetitle = 'Sample Page Template';
-  - var metaData = { contenttitle: pagetitle, url: site.baseurl + '/page.html', image: site.baseurl + '/assets/img/dunamaise-mobile.JPG?height=400', author: site.authors.harry, description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis inventore unde facere nihil eaque odit, quas in mollitia dignissimos sed expedita assumenda saepe molestias quos, quis est ullam.', twitter_large: true};
+  - var metaData = { contenttitle: pagetitle, url: site.baseurl + '/page.html', image: site.baseurl + site.defaultThumbnail, author: site.authors.harry, description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis inventore unde facere nihil eaque odit, quas in mollitia dignissimos sed expedita assumenda saepe molestias quos, quis est ullam.', twitter_large: true};
 
 block content
   h1 #{pagetitle}
 
   p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe tempora ut accusantium at, laudantium sit repudiandae, enim nostrum aliquid non pariatur, placeat odio laboriosam hic a vitae quaerat quia. Corporis.
 
-  //- +youtube('lJIrF4YjHfQ')
-  //- +image('/assets/img/dunamaise-mobile.JPG', 'Dunamaise')
-  //- +tweet('365023780755603457')
-  //- +facebook('https://www.facebook.com/theguardian/videos/10154336063881323/', 'video')
-  //- +facebook('https://www.facebook.com/theguardian/posts/10154340118886323', 'post')
+  +youtube('lJIrF4YjHfQ')
+
+  +image('/assets/img/dunamaise-mobile.JPG', 'Dunamaise')
+
+  +tweet('365023780755603457')
+
+  +facebook('https://www.facebook.com/theguardian/videos/10154336063881323/', 'video')
+
+  +facebook('https://www.facebook.com/theguardian/posts/10154340118886323', 'post')

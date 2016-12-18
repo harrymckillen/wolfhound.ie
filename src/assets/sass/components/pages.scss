@@ -33,14 +33,7 @@
 // individual article
 .individual-article {
   .postinfo {
-    font-size: 0.65em;
     text-align: center;
-    text-transform: uppercase;
-    .middot {
-      font-size: 1.55em;
-      line-height: 0.5em;
-      margin: 0 0.3em;
-    }
   }
 
   .author {
@@ -75,7 +68,7 @@
         margin-left: 0;
       }
       p {
-        line-height: 1.4em;
+        line-height: 1.6em;
       }
     }
 
@@ -93,3 +86,12 @@
   }
 }
 
+.postinfo {
+  font-size: 0.65em;
+  text-transform: uppercase;
+  .middot {
+    font-size: 1.55em;
+    line-height: 0.5em;
+    margin: 0 0.3em;
+  }
+}

@@ -1,5 +1,7 @@
-mixin postinfo(postdate, categories)
+mixin postinfo(issueno, postdate, categories)
   div.postinfo
+    span Issue ##{issueno}
+    span.middot &middot;
     span(ng-bind="#{postdate} | date:'LLLL dd, yyyy'")
     span.middot &middot;
     span #{categories}

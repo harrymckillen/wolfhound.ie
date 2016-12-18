@@ -19,6 +19,7 @@
     "tmp/appjs/scripts/app/directives/contact-form.directive.js",
     "tmp/appjs/scripts/app/directives/quote-selection.directive.js",
     "tmp/appjs/scripts/app/directives/gallery.directive.js",
+    "tmp/appjs/scripts/app/directives/article-index.directive.js",
     "tmp/appjs/scripts/app/directives/approx-reading-time.directive.js",
     "tmp/appjs/scripts/app/directives/active-menu-link.directive.js"
   ]

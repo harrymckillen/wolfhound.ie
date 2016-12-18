@@ -1,16 +1,10 @@
 [
   {
-    "date": 1473796996192,
-    "title": "Blah blah blah",
-    "link": "/articles/post.html",
+    "issue": 1,
+    "date": 1482097140409,
+    "title": "Another First Post",
+    "link": "/articles/another-first-post.html",
     "categories": "Opinion",
-    "intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae hic at harum similique sed quos! Tempore mollitia esse nemo, amet, non inventore autem culpa minus! Laudantium impedit sed dolores? Quae!"
-  },
-  {
-    "date": 1473796996192,
-    "title": "Blah blah blah #2",
-    "link": "/articles/post.html",
-    "categories": "Opinion",
-    "intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae hic at harum similique sed quos! Tempore mollitia esse nemo, amet, non inventore autem culpa minus! Laudantium impedit sed dolores? Quae!"
+    "intro": "I do this, again and again. I re-design my site, I create a blog element to it. I make grandiose plans in my head about features and articles I would add to this blog, and then I never do anything. Until the next re-design, and the cycle repeats."
   }
 ]

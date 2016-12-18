@@ -39,7 +39,7 @@
       "title": "Articles",
       "link": "/articles/",
       "type": "page",
-      "menulink": false
+      "menulink": true
     },
     {
       "title": "Contact",

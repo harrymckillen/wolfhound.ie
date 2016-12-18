@@ -2,7 +2,10 @@ mixin articles(articleobject)
   div.a-row.article-index
     - each article in articleobject
       div.a-column.width-1-of-12.article-preview
-        span.date(ng-bind="#{article.date} | date:'LLLL dd, yyyy'")
+        div.postinfo
+          span Issue ##{article.issue}
+          span.middot &middot;
+          span(ng-bind="#{article.date} | date:'LLLL dd, yyyy'")
         a(href="#{article.link}")
           h2 #{article.title}
           p #{article.intro}
