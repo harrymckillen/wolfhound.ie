@@ -1,0 +1,32 @@
+extends ../assets/jade/html.jade
+
+block variables
+  //- should only need to change the id in the articles array
+  - var article = articles[1];
+  - var pagetitle = article.title;
+  - var tweetQuote = true;
+  - var metaData = { contenttitle: article.title, url: site.baseurl + article.link, image: site.baseurl + '/assets/img/articles/001-ford-wiper.jpg', author: site.authors.harry, description: article.intro, twitter_large: true};
+
+block content
+
+  div.individual-article
+
+    +postinfo(article.issue, article.date, article.categories)
+
+    h1 #{pagetitle}
+
+    p #{article.intro}
+
+    p UX, or User Experience is now often used in context with a digital experience of end-users. It has existed for as long as we have been building anything. Obviously this is a massive subject area, and too vast to cover off in a single blog post.
+
+    p One particular function of this car is the window wipers. You’d expect this fairly routine feature of any car to be in a similar location and function the same, especially given the make of car is the same. But there is one small issue with the Mondeo.
+
+    +image('/assets/img/articles/001-ford-wiper.jpg', 'Ford Wiper Switch', true)
+
+    p In the Focus, how the wiper interval works seems to be correct. You would expect the narrower side to be a shorter interval between wipes. However, the exact same feature is reversed in the Mondeo. The wide side is counterintuitively the shortest wipe interval.
+
+    p It’s a relatively minor difference, and could well just be a mistake during the building of the particular component in the vehicle. But it serves as one example of how an interface can have one expected function and end up with two potential different actual outcomes. I accept the difference in the Mondeo, and from use, know the difference. Had I owned this car prior to Focus, I might have believe the Mondeo to be correct in its operation.
+
+    p Does it annoy me enough to take it back to my local Ford garage to be fixed? No. I’d be charged a small fortune to most likely replace half of the car with new parts.
+
+    +author(metaData.author)
