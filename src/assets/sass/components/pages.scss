@@ -1,28 +1,36 @@
 // article index
 .article-index {
   margin: $std-padding*6 0 0 0;
+
   .article-preview {
+
     h2 {
-      margin: 0 0 0.3em 0;
+      margin: 0.2em 0 0.5em 0;
       font-size: 1.4em;
     }
+
     p{
-      margin: 0.2em 0 0.7em 0;
+      margin: 0 0 1em 0;
     }
+
     a {
       text-decoration: none;
       color: $primaryForegroundColour;
+
       &:hover {
+
         h2 {
           text-decoration: underline;
         }
       }
+
       .read-article {
         margin-bottom: 2em;
         font-size: 0.75em;
         font-family: $header-font;
       }
     }
+
     .date {
       font-size: 0.65em;
       text-transform: uppercase;
@@ -32,6 +40,7 @@
 
 // individual article
 .individual-article {
+
   .postinfo {
     text-align: center;
   }
@@ -42,17 +51,19 @@
     padding-top: $std-padding*8;
     margin-top: $std-padding*8;
 
-
     .profilepic {
       overflow: hidden;
+      border: 0;
+
       img {
         border-radius: 100%;
       }
-      border: 0;
+
       @include tablet {
         width: 20%;
         margin: 0 auto;
       }
+
       @include mobile {
         width: 40%;
       }
@@ -64,9 +75,11 @@
 
     .about {
       margin-left: $std-padding*3;
+
       @include tablet {
         margin-left: 0;
       }
+
       p {
         line-height: 1.6em;
       }
@@ -74,11 +87,13 @@
 
     ul{
       padding-left: 0;
+
       li{
         display: block;
         float: left;
         margin: 0 $std-padding*2 0 0;
       }
+
       &:after{
         clear: both;
       }
@@ -87,8 +102,10 @@
 }
 
 .postinfo {
+
   font-size: 0.65em;
   text-transform: uppercase;
+
   .middot {
     font-size: 1.55em;
     line-height: 0.5em;
