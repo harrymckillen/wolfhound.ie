@@ -8,19 +8,22 @@ angular.module('wolfhound.directives')
     templateUrl: '/assets/ng-templates/cookie-warning.html',
     link: function (scope){
 
-      // defaults
+      // local variables
       var cookieName = 'acceptCookiesCookie'
       var acceptCookie = $cookies.get(cookieName);
       var now = new Date(),
           exp = new Date(now.getFullYear()+1, now.getMonth(), now.getDate());
 
-      // scope vars
+      // scope variable
       scope.showCookieWarning = false;
 
+      // if cookie does not exist, show cookie warning
       if(acceptCookie === undefined) {
         scope.showCookieWarning = true;
       }
 
+      // accept cookies function, when button clicked, it sets a cookie
+      // which expires 1 year from now
       scope.acceptCookies = function () {
         $cookies.put(cookieName, 1, { expires: exp });
         scope.showCookieWarning = false;
