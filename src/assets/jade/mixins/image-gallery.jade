@@ -11,6 +11,10 @@ mixin image-gallery
       div.direction-buttons.next
         button.icon-right-open-big(ng-click="openGalleryItem(nextGalleryImage)")
 
+      div.a-row.item-count
+        div.a-column.width-1-of-12.align-center
+          span {{currentGalleryImageLabel}} of {{galleryImageNum}}
+
       div.a-row
         div.a-column.width-2-of-12
           h2 {{galleryTitle}}
@@ -18,6 +22,3 @@ mixin image-gallery
         div.a-column.width-2-of-12
           div.responsive-image
             img(ng-src="{{galleryImage}}" status="loaded")
-      div.a-row
-        div.a-column.width-1-of-12.align-center
-          span.margin-top-1em {{currentGalleryImageLabel}} of {{galleryImageNum}}
