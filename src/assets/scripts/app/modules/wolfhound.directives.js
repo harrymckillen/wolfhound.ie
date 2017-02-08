@@ -4,4 +4,4 @@
 * Description: contains all directives used within wolfhound.app
 *
 */
-angular.module('wolfhound.directives', []);
+angular.module('wolfhound.directives', ['wolfhound.services']);
