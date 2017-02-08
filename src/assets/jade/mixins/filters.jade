@@ -1,0 +1,49 @@
+mixin article-filters
+  div.margin-bottom-1em.a-row
+    div.a-column.width-1-of-12
+      button.ghost-button(ng-click="showFilters()")
+        span.icon-filter
+        span(ng-if="!filtersShown") Show Filters
+        span(ng-if="filtersShown") Hide Filters
+
+      a.margin-left-1em.header-font.font-s.white.no-decoration(ng-if="searchFilters.category !== undefined || searchFilters.text !== undefined" href="#" ng-click="clearFilters()") Clear Filters
+
+      div.a-column.width-1-of-12.article-filters(ng-if="filtersShown")
+
+        div.a-row
+          div.a-column.width-3-of-12
+            div.a-row
+              div.a-column.width-1-of-12
+              | Category
+
+            div.a-row
+              div.a-column.width-1-of-12
+                select(ng-model="searchFilters.category")
+                  option(value="" selected disabled hidden) Please select
+                  option(ng-repeat="category in categories") {{ category }}
+
+          div.a-column.width-3-of-12
+            div.a-row
+              div.a-column.width-1-of-12
+              | Search Text
+
+            div.a-row
+              div.a-column.width-1-of-12
+                input.custom-padding(type="text" ng-model="searchFilters.text" placeholder="Title or Description")
+
+          div.a-column.width-3-of-12
+            div.a-row
+              div.a-column.width-1-of-12
+              | Change sorting to
+
+            div.a-row
+              div.a-column.width-1-of-12
+                a.ghost-button.pointer.fixed-height.align-center.block.margin-bottom-1em(ng-click="reverse()")
+                  span(ng-if="!newestFirst") Newest First
+                  span(ng-if="newestFirst") Oldest First
+
+      div.a-column.width-1-of-12.margin-top-1em(ng-if="searchFilters.category !== undefined || searchFilters.text !== undefined")
+        span You've filtered by
+        span(ng-if="searchFilters.category !== undefined") &nbsp;Category "{{searchFilters.category}}"
+        span(ng-if="searchFilters.category !== undefined && searchFilters.text !== undefined") &nbsp;&amp;&nbsp;
+        span(ng-if="searchFilters.text !== undefined") &nbsp;the text "{{searchFilters.text}}"
