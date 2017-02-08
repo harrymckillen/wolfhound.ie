@@ -3,6 +3,7 @@
   "description": "I am a full-time web developer working for Aer Lingus. In my spare time I like to play with code. This website acts as my CV and Portfolio.",
   "baseurl": "http://www.wolfhound.ie",
   "defaultThumbnail": "/assets/img/dunamaise-mobile.JPG",
+  "themeColor": "#34495e",
   "social": {
     "twitter": "@wolfhoundie"
   },
