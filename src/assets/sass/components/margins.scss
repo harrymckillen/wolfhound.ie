@@ -30,7 +30,7 @@ $i: 5;
 $i: 5;
 @while $i < 50 {
   .margin-left-#{$i}px{
-    margin-left: #{$i}px;
+    margin-left: #{$i}px !important;
   }
   $i: $i + 5;
 }
@@ -39,7 +39,7 @@ $i: 5;
 $i: 5;
 @while $i < 50 {
   .margin-right-#{$i}px{
-    margin-right: #{$i}px;
+    margin-right: #{$i}px !important;
   }
   $i: $i + 5;
 }
@@ -48,7 +48,7 @@ $i: 5;
 $i: 5;
 @while $i < 50 {
   .margin-top-#{$i}px{
-    margin-top: #{$i}px;
+    margin-top: #{$i}px !important;
   }
   $i: $i + 5;
 }
@@ -57,7 +57,7 @@ $i: 5;
 $i: 5;
 @while $i < 70 {
   .margin-bottom-#{$i}px{
-    margin-bottom: #{$i}px;
+    margin-bottom: #{$i}px !important;
   }
   $i: $i + 5;
 }
@@ -67,7 +67,7 @@ $i: 5;
 $i: 1;
 @while $i < 10 {
   .margin-all-#{$i}em{
-    margin: #{$i}em;
+    margin: #{$i}em !important;
   }
   $i: $i + 1;
 }
@@ -76,7 +76,7 @@ $i: 1;
 $i: 1;
 @while $i < 10 {
   .margin-left-#{$i}em{
-    margin-left: #{$i}em;
+    margin-left: #{$i}em !important;
   }
   $i: $i + 1;
 }
@@ -85,7 +85,7 @@ $i: 1;
 $i: 1;
 @while $i < 10 {
   .margin-right-#{$i}em{
-    margin-right: #{$i}em;
+    margin-right: #{$i}em !important;
   }
   $i: $i + 1;
 }
@@ -94,7 +94,7 @@ $i: 1;
 $i: 1;
 @while $i < 10 {
   .margin-top-#{$i}em{
-    margin-top: #{$i}em;
+    margin-top: #{$i}em !important;
   }
   $i: $i + 1;
 }
@@ -103,7 +103,7 @@ $i: 1;
 $i: 1;
 @while $i < 10 {
   .margin-bottom-#{$i}em{
-    margin-bottom: #{$i}em;
+    margin-bottom: #{$i}em !important;
   }
   $i: $i + 1;
 }

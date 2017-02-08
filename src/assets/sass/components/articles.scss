@@ -1,5 +1,6 @@
 // article index
 .article-index {
+
   margin: $std-padding*6 0 0 0;
 
   .article-preview {
@@ -101,14 +102,22 @@
   }
 }
 
+// post info
 .postinfo {
 
   font-size: 0.65em;
   text-transform: uppercase;
 
   .middot {
+
     font-size: 1.55em;
     line-height: 0.5em;
     margin: 0 0.3em;
+
   }
+}
+
+// article filters
+.article-filters {
+  border: 2px solid $primaryForegroundColour;
 }

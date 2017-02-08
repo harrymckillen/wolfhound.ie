@@ -34,6 +34,15 @@
       background: rgba($green, 1);
     }
   }
+
+  .icon-filter {
+    margin: 0 5px 0 -9px;
+  }
+
+  &.fixed-height {
+    padding: 0 1em;
+    line-height: 38.38px;
+  }
 }
 
 .full-width{

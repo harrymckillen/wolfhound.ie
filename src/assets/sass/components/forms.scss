@@ -5,7 +5,12 @@ label {
   padding: 0.3em 0 0.5em 0;
 }
 
-input[type="text"], input[type="password"], input[type="email"], textarea, select {
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+
   width: 100%;
   color: $primaryForegroundColour;
   padding: 0.4em 0.6em;
@@ -15,14 +20,21 @@ input[type="text"], input[type="password"], input[type="email"], textarea, selec
   border-bottom: 2px solid rgba($primaryForegroundColour,1);
   background: rgba($primaryForegroundColour, 0.2);
   cursor: pointer;
+
   &.valid-field {
     background: rgba($green, 0.5);
     border-bottom: 2px solid rgba($green,1);
   }
+
   &.invalid-field {
     background: rgba($red, 0.5);
     border-bottom: 2px solid rgba($red,1);
   }
+
+  &.custom-padding {
+    padding: 0.453em 0.6em;
+  }
+
   @include transition(all 0.2s linear);
 
   &::-webkit-input-placeholder {
@@ -45,8 +57,10 @@ input[type="text"], input[type="password"], input[type="email"], textarea, selec
   // &:hover, &:focus, &:active {
   // &:hover, &:focus{
   &:focus{
+
     color: $mainBackgroundColour;
     background: $primaryForegroundColour;
+
     &::-webkit-input-placeholder {
       color: rgba($mainBackgroundColour, 0.5);
       opacity:  1;
@@ -67,6 +81,7 @@ input[type="text"], input[type="password"], input[type="email"], textarea, selec
 }
 
 input[type="radio"], input[type="checkbox"] {
+
   float: left;
   display: block;
   margin: 10px 10px 6px 0;
