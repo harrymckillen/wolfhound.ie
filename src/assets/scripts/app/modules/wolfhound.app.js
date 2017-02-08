@@ -7,7 +7,6 @@
 angular.module('wolfhound.app', [
   'wolfhound.services',
   'wolfhound.directives',
-  // 'wolfhound.controllers',
 
   // third party
   'ngtweet',
