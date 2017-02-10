@@ -19,6 +19,7 @@ block content
             ng-class="{'valid-field':contact.name.$valid && contact.name.$dirty, 'invalid-field': (contact.name.$invalid && contact.name.$dirty) || showError.name }"
             name="name"
             id="name"
+            ng-blur="checkValidity('name', contact.name.$valid)"
             ng-keyup="checkValidity('name', contact.name.$valid)"
             ng-pattern="/^[a-zA-Z\\s]*$/"
             ng-model="name"
@@ -48,6 +49,7 @@ block content
             ng-class="{'valid-field':contact.email.$valid && contact.email.$dirty, 'invalid-field': (contact.email.$invalid && contact.email.$dirty) || showError.email}"
             name="email"
             id="email"
+            ng-blur="checkValidity('email', contact.email.$error.required)"
             ng-keyup="checkValidity('email', contact.email.$error.required)"
             ng-model="email"
             ng-required="true"
@@ -56,7 +58,7 @@ block content
           )
 
           div.error-message(ng-if="(contact.email.$error.required && contact.email.$dirty && contact.email.$invalid) || showError.email") {{ errorMessages.requiredField }}
-          div.error-message(ng-if="contact.email.$error.email && contact.email.$dirty && contact.email.$invalid") {{ errorMessages.validEmail}}
+          div.error-message(ng-if="contact.email.$error.email && contact.email.$dirty && contact.email.$invalid") {{ errorMessages.validEmail }}
 
       div.a-row.margin-bottom-10px
         div.a-column.width-1-of-12
@@ -64,6 +66,7 @@ block content
           select(
             ng-class="{'valid-field':contact.query.$valid && contact.query.$dirty, 'invalid-field': (contact.query.$invalid && contact.query.$dirty) || showError.query }"
             name="query"
+            ng-blur="checkValidity('query', contact.query.$valid)"
             ng-keyup="checkValidity('query', contact.query.$valid)"
             ng-model="query"
             ng-required="true"
@@ -81,6 +84,7 @@ block content
             ng-class="{'valid-field':contact.message.$valid && contact.message.$dirty, 'invalid-field': (contact.message.$invalid && contact.message.$dirty) || showError.message }"
             name="message"
             id="message"
+            ng-blur="checkValidity('message', contact.message.$valid)"
             ng-keyup="checkValidity('message', contact.message.$valid)"
             ng-model="message"
             ng-required="true"
@@ -103,5 +107,5 @@ block content
       ul
         li
           a(href="work.html") My Work
-        //- li
-        //-   a(href="articles/") Some articles I have posted
+        li
+          a(href="articles/") Some articles I have posted
