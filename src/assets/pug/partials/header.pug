@@ -14,8 +14,8 @@ header#top.header.block.relative
         span(class="bar bottom")
       | {{ buttonText }}
     ul#collapsible-menu.links.no-padding-left.margin-left-10px.margin-right-10px(ng-class="{'show': menuShown}" aria-hidden="{{!menuShown}}")
-      - each item in site.pages
+      each item in site.pages
         if item.menulink
           li
-            a(href="#{item.link}" active-menu-link) #{item.title}
+            a(href=item.link active-menu-link) #{item.title}
 

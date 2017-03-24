@@ -70,7 +70,7 @@ module.exports = function (grunt) {
         }
       }
     },
-    jade: {
+    pug: {
       build: {
         options: {
           pretty: false,
@@ -82,7 +82,7 @@ module.exports = function (grunt) {
         files: [
           {
             cwd: "src",
-            src: ["**/*.jade", "!assets/jade/**/*.jade"],
+            src: ["**/*.pug", "!assets/pug/**/*.pug"],
             dest: "build",
             expand: true,
             ext: ".html"
@@ -145,7 +145,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-ftp-push');
-  grunt.loadNpmTasks('grunt-contrib-jade');
+  // grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-contrib-pug');
   grunt.loadNpmTasks('grunt-ng-annotate');
 
   // Registered Tasks
@@ -157,7 +158,7 @@ module.exports = function (grunt) {
       'ngAnnotate:build',
       'uglify:build',
       'concat:build',
-      'jade:build',
+      'pug:build',
       'clean:tmp'
     ]);
 
