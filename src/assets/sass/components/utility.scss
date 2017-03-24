@@ -43,6 +43,11 @@
     padding: 0 1em;
     line-height: 38.38px;
   }
+
+  &.highlighted {
+    background: rgba($primaryForegroundColour, 1);
+    color:$mainBackgroundColour;
+  }
 }
 
 .full-width{
