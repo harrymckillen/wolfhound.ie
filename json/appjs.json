@@ -10,17 +10,10 @@
     "tmp/appjs/scripts/constants.js",
     "tmp/appjs/scripts/app/modules/wolfhound.app.js",
     "tmp/appjs/scripts/app/modules/wolfhound.services.js",
-    "tmp/appjs/scripts/app/services/data.service.js",
-    "tmp/appjs/scripts/app/services/keyboard-input.service.js",
     "tmp/appjs/scripts/app/modules/wolfhound.directives.js",
-    "tmp/appjs/scripts/app/directives/cookie-warning.directive.js",
-    "tmp/appjs/scripts/app/directives/menu-button.directive.js",
-    "tmp/appjs/scripts/app/directives/lazy-load.directive.js",
-    "tmp/appjs/scripts/app/directives/contact-form.directive.js",
-    "tmp/appjs/scripts/app/directives/quote-selection.directive.js",
-    "tmp/appjs/scripts/app/directives/gallery.directive.js",
-    "tmp/appjs/scripts/app/directives/article-index.directive.js",
-    "tmp/appjs/scripts/app/directives/approx-reading-time.directive.js",
-    "tmp/appjs/scripts/app/directives/active-menu-link.directive.js"
+    "tmp/appjs/scripts/app/modules/wolfhound.filters.js",
+    "tmp/appjs/scripts/app/services/*.service.js",
+    "tmp/appjs/scripts/app/filters/*.filter.js",
+    "tmp/appjs/scripts/app/directives/*.directive.js"
   ]
 }
