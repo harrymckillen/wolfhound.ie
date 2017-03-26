@@ -1,26 +1,26 @@
 meta(name="viewport", content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
 meta(http-equiv="X-UA-Compatible", content="IE=edge")
 meta(charset="utf-8")
-meta(name="theme-color" content="#{site.themeColor}")
+meta(name="theme-color" content=site.themeColor)
 
 if metaData
-  meta(name="description" content="#{metaData.description}")
+  meta(name="description" content=metaData.description)
 
   //- facebook
-  meta(property="og:url" content="#{metaData.url}")
+  meta(property="og:url" content=metaData.url)
   meta(property="og:type" content="website")
-  meta(property="og:title" content="#{metaData.contenttitle}")
-  meta(property="og:image" content="#{metaData.image}")
-  meta(property="og:description" content="#{metaData.description}")
-  meta(property="og:site_name" content="#{site.title}")
+  meta(property="og:title" content=metaData.contenttitle)
+  meta(property="og:image" content=metaData.image)
+  meta(property="og:description" content=metaData.description)
+  meta(property="og:site_name" content=site.title)
 
   //- twitter
-  meta(name="twitter:site" content="#{site.social.twitter}")
-  meta(name="twitter:creator" content="#{metaData.author.twitterHandle}")
-  meta(name="twitter:url" content="#{metaData.url}")
-  meta(name="twitter:title" content="#{metaData.contenttitle}")
-  meta(name="twitter:description" content="#{metaData.description}")
-  meta(name="twitter:image" content="#{metaData.image}")
+  meta(name="twitter:site" content=site.social.twitter)
+  meta(name="twitter:creator" content=metaData.author.twitterHandle)
+  meta(name="twitter:url" content=metaData.url)
+  meta(name="twitter:title" content=metaData.contenttitle)
+  meta(name="twitter:description" content=metaData.description)
+  meta(name="twitter:image" content=metaData.image)
 
   if metaData.twitter_large
     meta(name="twitter:card" content="summary_large_image")
@@ -28,6 +28,6 @@ if metaData
     meta(name="twitter:card" content="summary")
 
 else
-  meta(name="description" content="#{site.description}")
+  meta(name="description" content=site.description)
   meta(name="twitter:image" content="/assets/img/dunamaise-mobile.JPG")
   meta(property="og:image" content="/assets/img/dunamaise-mobile.JPG")
