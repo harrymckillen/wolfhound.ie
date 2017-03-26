@@ -9,6 +9,7 @@ module.exports = function (grunt) {
   var siteconfig = grunt.file.readJSON('json/site.json');
   var articles = grunt.file.readJSON('json/articles.json');
   var appjs = grunt.file.readJSON('json/appjs.json');
+  var timestamp = Date.now();
 
   // Configs
   grunt.initConfig({
@@ -28,7 +29,7 @@ module.exports = function (grunt) {
       },
       justfiles: {
         files: [
-          {expand: true, cwd: 'build', src: ['**/*.html', '**/*.css', '**/*.js', '**/*.php', '.htaccess']}
+          {expand: true, cwd: 'build', src: ['**/*.html', '**/*.css', '**/*.js', '**/*.php', '**/*.json', '.htaccess']}
         ]
       }
     },
@@ -77,6 +78,7 @@ module.exports = function (grunt) {
           data: {
             site: siteconfig,
             articles: articles,
+            timestamp: timestamp
           }
         },
         files: [
@@ -145,7 +147,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-ftp-push');
-  // grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-pug');
   grunt.loadNpmTasks('grunt-ng-annotate');
 
