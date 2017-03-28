@@ -9,7 +9,7 @@ I use a good few of these technologies in work. I have previously always had a W
 * node.js
 * gruntjs
 * Sass
-* Jade
+* Pug
 * Javascript/AngularJS
 * HTML... goes without saying really
 
