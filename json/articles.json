@@ -14,5 +14,13 @@
     "link": "/articles/a-bad-ux-example.html",
     "categories": "UX",
     "intro": "One specific example I have is not related to the digital world at all. I own two models of Ford (a Mondeo and a Focus). Being the same brand of car, and close enough in age, I would expect there to be some crossover in the parts used."
+  },
+  {
+    "issue": 3,
+    "date": 1490729593539,
+    "title": "Above the fold",
+    "link": "/articles/above-the-fold.html",
+    "categories": "Opinion",
+    "intro": "Many of us will know what above the fold means in relation to print design. It refers to the top section of a broadsheet when folded, which is typically visible to a customer in a newsagents for example."
   }
 ]

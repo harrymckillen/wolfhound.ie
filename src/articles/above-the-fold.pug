@@ -1,0 +1,36 @@
+extends ../assets/pug/html.pug
+
+block variables
+  //- should only need to change the id in the articles array
+  - var article = articles[2];
+  - var pagetitle = article.title;
+  - var tweetQuote = true;
+  - var metaData = { contenttitle: article.title, url: site.baseurl + article.link, image: site.baseurl + site.defaultThumbnail, author: site.authors.harry, description: article.intro, twitter_large: true};
+
+block content
+
+  div.individual-article
+
+    +postinfo(article.issue, article.date, article.categories)
+
+    h1 #{pagetitle}
+
+    p Many of us will know what above the fold means in relation to print design. It refers to the top section of a broadsheet when folded, which is typically visible to a customer in a newsagents for example. The premise being that the main headline is upfront and center, and generally contains other attention grabbing information, like ads etc. It is seen as highly valuable space.
+
+    p With the advent of the Internet, this premise seems to have been adopted since the early days to mean almost the exact same thing, in that when a page loads the idea is that some of the most important elements of your website should occupy the top section, or above the invisible &ldquo;fold&rdquo; where the user will have to scroll to continue viewing your website. Going back 15 years ago (just an example timeframe), screen resolutions were somewhat standardised and limited. Typically most websites were designed, or were constructed with a 800 pixel (px) screen width in mind. The typical resolution around that period would have been 1024x768. So designing for an 800px width meant having a nice border on each side of your website/content, whilst also being backwards compatible for those still on an 800x600 resolution.
+
+    p The &ldquo;fold&rdquo; around the similar time could vary, from 600px, to 768px, and upwards towards 1024px. So while there was still a little variation, it was slightly predictable. Generally, the first 500px of most sites contained, the logo, a navigation menu, and a bunch of important links, or submenus below the main navigation, or banner images. It is prized website real estate.
+
+    p To increase the amount of content someone could then jam into this space, the idea of a rotating carousel was devised. I’m still unconvinced of the effectiveness of carousels. Though almost any non-IT teams I have worked with seem to want them, and they want the ability to display yet more information to the visitor. If you were to critically look at the statistics from basic clickthroughs from such carousels, I don’t believe they are worth it (perhaps a blog post for another day). Just my personal opinion however, as I tend to ignore them when I am browsing. I tend to not visit a site, see a carousel and think, <em>you know what, I’ll stop and wait to see if there is anything worthwhile in there</em>.
+
+    p Fast forward to now. The screen resolution landscape is very much different. There is no standard screen size now, which is where the concept of <a href="https://alistapart.com/article/responsive-web-design">responsive design</a> comes in. The idea of which is that a website should scale and adapt to fit any given screen size and negate the requirement for separate mobile versions of a website. At the end of the day
+
+    p However, despite the fact that the prevalence of responsive design is now in mainstream usage, I still, as I'm sure others do, come up against the same attitude that the user needs to have almost every conceivable option near the top of the page. I know it's easier said than done for large scale sites with complex top level navigation structures. But condensing a large quantity of visible information which you may have on a desktop site down to the smallest mobile screen resolution is extremely tricky. It is why some sites opt for completely separate mobile sites. It is often difficult to achieve the desired results with their current desktop site, and this could stem from it being a legacy design from which they are slow to move from, or just trying to shoehorn a mobile version in on top of an already existing design. This can then lead to a disjointed offering for users between sites designed for desktop vs mobile. Some websites are great at this, and have lead the way in the concept of a one-size fits all solution, but some are not so great. I feel this has a lot to do with how the planning and design are approached.
+
+    p My preference personally is to have a simple clearly defined information architecture. This then assists design in determining what’s most important for the user to have up front which they visit the site. When these two elements are nailed down, it really does make my job as a developer so much easier.
+
+    h2 Conclusion
+
+    p I have disliked the term &ldquo;above the fold&rdquo; with respect to the web for quite some time. I’m glad with the many screen sizes we now support that it is used less and less. However, I still encounter the question of the amount of scrolling a user will have to do for a long page. That is just part and parcel of the web today. Personally, I accept that I have to scroll on page, especially on a mobile device. As long as the navigation is clear and concise, users should find their way. Less is more as they say.
+
+    +author(metaData.author)
