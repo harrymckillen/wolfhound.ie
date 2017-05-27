@@ -50,6 +50,7 @@
 
       &.open {
         .bar {
+          background: $menuForegroundColour;
           &.top, &.bottom {
             @include transition(all 0.1s linear);
             @include opacity(0);

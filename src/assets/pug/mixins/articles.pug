@@ -5,8 +5,8 @@ mixin articles(articleobject)
         div.postinfo
           span Issue ##{article.issue}
           span.middot &middot;
-          span(ng-bind="#{article.date} | date:'LLLL dd, yyyy'")
-        a(href="#{article.link}")
+          span(ng-bind=""+article.date +" | date:'LLLL dd, yyyy'")
+        a(href=article.link)
           h2 #{article.title}
           p #{article.intro}
           span.ghost-button.read-article.inline-block(href="#{article.link}") Read article

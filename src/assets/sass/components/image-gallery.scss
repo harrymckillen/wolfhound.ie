@@ -1,6 +1,7 @@
 [gallery] {
 
   img.gallery-item {
+    box-shadow: $primaryForegroundColour 0px 0px 3px;
     &:hover, &:focus {
       transform: scale(1.04);
     }
@@ -22,6 +23,7 @@
   z-index: 10;
   width: 100%;
   background: rgba($black,0.95);
+  color: $secondaryForegroundColour;
 
   h2 {
     margin: 0 0 0.83em 0;
@@ -43,6 +45,9 @@
     right: 0.5em;
     font-size: 1.2em;
     padding: 0;
+    border:2px solid $secondaryForegroundColour;
+    color:$secondaryForegroundColour;
+    background: rgba($secondaryForegroundColour, 0);
   }
 
   .direction-buttons {
@@ -63,9 +68,9 @@
       outline: none;
       background: none;
       border: none;
-      color: rgba($primaryForegroundColour, 0.5);
+      color: rgba($secondaryForegroundColour, 0.5);
       &:hover {
-        color: rgba($primaryForegroundColour, 1);
+        color: rgba($secondaryForegroundColour, 1);
       }
     }
     &.prev {
