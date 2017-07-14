@@ -10,7 +10,7 @@ html(lang="en" dir="ltr" ng-app="wolfhound.app")
     block head
 
   if pageClassName
-    body(class="#{pageClassName} ng-cloak")
+    body(class="ng-cloak "+pageClassName)
       include partials/body.pug
 
   else
