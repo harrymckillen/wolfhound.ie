@@ -1,18 +1,30 @@
 extends assets/pug/html.pug
 
 block variables
-  //- var pageClassName = 'home'
   - var gridSize = 'large'
-  - var footerHidden = true;
   - var metaData = { contenttitle: site.title, url: site.baseurl + '/index.html', image: site.baseurl + site.defaultThumbnail, author: site.authors.harry, description: 'This site acts as my portfolio and CV. My name is Harry McKillen, a Web Developer with over 10 years experience.', twitter_large: true};
 
+block banner
+  section.home-banner
+    h1.title-text.white.relative.align-center.padding-top-90px.no-margins Wolfhound
+    h2.subtitle-text.align-center.white.relative Building websites &amp; stuff
+
+    div.relative.align-center.block.margin-top-2em
+      a(href="work.html").solid-button.relative.bold.header-font.font-n.margin-right-20px.margin-bottom-20px What I do
+      a(href="contact.html#/hire-me").solid-button.relative.bold.header-font.font-n.margin-bottom-20px Hire Me
+
+
 block content
-  div.no-margins.margin-left-15px.margin-right-15px.margin-top-4em.margin-bottom-4em
-    h1.title-text
-      span Wolfhound
-      span.mediadesign Web Development.
-
-    span.divider.margin-top-45px.margin-bottom-60px.full-width
-
-    a(href="work.html").ghost-button.bold.inline-block.header-font.font-n.margin-right-20px.margin-bottom-20px What I do
-    a(href="contact.html#/hire-me").ghost-button.bold.inline-block.header-font.font-n.margin-bottom-20px Hire Me
+  div.a-row
+    div.a-column.width-2-of-12.align-center
+      div.padding-left-10px.padding-right-10px
+        h3.no-margin-top Development
+        p I enjoy making websites and tools for people to use. I focus primarily on Development, with a keen interest in User Experience and Design also.
+    div.a-column.width-2-of-12.align-center
+      div.padding-left-10px.padding-right-10px
+        h3.no-margin-top Keep it simple, stupid
+        p  I try to follow this principle when approaching both design and development. If something is difficult to use and understand, people will avoid using it.
+  div.a-row
+    div.a-column.width-66-in-pc.centered.align-center
+      h3.no-margin-top Quick Intro
+      p  My name is Harry, this is my website to showcase my experience, primarily with Web Development. It acts as an addition to my CV where I have some details of projects I've been involved in. <a href="/about.html">You can read a little more about me</a>.
