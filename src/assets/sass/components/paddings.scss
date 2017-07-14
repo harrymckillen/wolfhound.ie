@@ -46,7 +46,7 @@ $i: 5;
 
 // top
 $i: 5;
-@while $i < 50 {
+@while $i < 95 {
   .padding-top-#{$i}px{
     padding-top: #{$i}px;
   }
@@ -62,3 +62,48 @@ $i: 5;
   $i: $i + 5;
 }
 
+// em paddings
+// all
+$i: 1;
+@while $i < 10 {
+  .padding-all-#{$i}em {
+    padding: #{$i}em !important;
+  }
+  $i: $i + 1;
+}
+
+// left
+$i: 1;
+@while $i < 10 {
+  .padding-left-#{$i}em {
+    padding-left: #{$i}em !important;
+  }
+  $i: $i + 1;
+}
+
+// right
+$i: 1;
+@while $i < 10 {
+  .padding-right-#{$i}em {
+    padding-right: #{$i}em !important;
+  }
+  $i: $i + 1;
+}
+
+// top
+$i: 1;
+@while $i < 10 {
+  .padding-top-#{$i}em {
+    padding-top: #{$i}em !important;
+  }
+  $i: $i + 1;
+}
+
+// bottom
+$i: 1;
+@while $i < 10 {
+  .padding-bottom-#{$i}em {
+    padding-bottom: #{$i}em !important;
+  }
+  $i: $i + 1;
+}

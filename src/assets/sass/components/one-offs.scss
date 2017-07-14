@@ -1,40 +1,31 @@
 // home page text
 .title-text {
-  span {
-    line-height: 1em;
-    text-rendering: optimizeLegibility;
-    font-family: $header-font;
-    letter-spacing: -2px;
-    text-transform: uppercase;
+  line-height: 1em;
+  text-rendering: optimizeLegibility;
+  font-family: $header-font;
+  letter-spacing: -2px;
+  text-transform: uppercase;
 
-    @include superwide {
-      font-size: 8.2vw;
-    }
-    @include desktop {
-      font-size: 10vw;
-    }
-    @include tablet {
-      font-size: 13vw;
-    }
+  @include superwide {
+    font-size: 5em;
+  }
+  @include desktop {
+    font-size: 10vw;
+  }
+}
 
-    @if $shadow {
-      text-shadow: 0px 0px 3px $black;
-    }
+.subtitle-text {
+  font-weight: normal;
+  display: block;
 
-    &.mediadesign {
-      font-weight: normal;
-      display: block;
-
-      @include superwide {
-        font-size: 4.5vw;
-      }
-      @include desktop {
-        font-size: 6.5vw;
-      }
-      @include tablet {
-        font-size: 8vw;
-      }
-    }
+  @include superwide {
+    font-size: 1.75em;
+  }
+  @include desktop {
+    font-size: 3.5vw;
+  }
+  @include tablet {
+    font-size: 5vw;
   }
 }
 
@@ -57,6 +48,7 @@
   width: 100%;
   .cookie-warning {
     background-color: rgba($black, 0.9);
+    color: $white;
     span {
       width: 75%;
       @include tablet {

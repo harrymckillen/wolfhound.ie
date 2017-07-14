@@ -9,6 +9,7 @@
   }
 
   @include transition(all 0.5s linear);
+
   border-bottom: 2px solid $primaryForegroundColour;
   height: 2px;
   display: block;
@@ -16,11 +17,16 @@
 
 .ghost-button{
 
-  border:2px solid $primaryForegroundColour;
+  border: 2px solid $primaryForegroundColour;
   text-decoration: none;
-  color:$primaryForegroundColour;
+  color: $primaryForegroundColour;
   padding: 0.5em 1em;
   background: rgba($primaryForegroundColour, 0);
+
+  &.alt {
+    border-color: $mainBackgroundColour;
+    color: $mainBackgroundColour;
+  }
 
   @include transition(all 0.5s linear);
 
@@ -32,6 +38,14 @@
     background-color: rgba($green, 0.4);
     &:hover, &:focus {
       background: rgba($green, 1);
+    }
+  }
+
+  &.filled {
+    background-color: rgba($primaryForegroundColour, 0.8);
+    color:$mainBackgroundColour;
+    &:hover, &:focus {
+      background: rgba($black, 1);
     }
   }
 
@@ -50,13 +64,27 @@
   }
 }
 
+.solid-button{
+  background-color: $blue;
+  color: $white;
+
+  @include transition(all 0.5s linear);
+
+  &:hover, &:focus {
+    background-color: darken($blue, 20%);
+  }
+
+  text-decoration: none;
+  padding: 0.5em 0.75em;
+  border-radius: 3px;
+}
+
 .full-width{
   width: 100%;
 }
 .half-width{
   width: 50%;
 }
-
 .cursor {
   cursor: pointer;
 }
