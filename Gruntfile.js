@@ -5,6 +5,7 @@
 module.exports = function (grunt) {
   'use script';
 
+  var _ = require('lodash');
   var hosts = grunt.file.readJSON('json/hosts.json');
   var siteconfig = grunt.file.readJSON('json/site.json');
   var articles = grunt.file.readJSON('json/articles.json');
@@ -29,7 +30,7 @@ module.exports = function (grunt) {
       },
       justfiles: {
         files: [
-          {expand: true, cwd: 'build', src: ['**/*.html', '**/*.css', '**/*.js', '**/*.php', '**/*.json', '.htaccess']}
+          {expand: true, cwd: 'build', src: ['**/*.html', '**/*.css', '**/*.js', '**/*.txt', '**/*.php', '**/*.json', '.htaccess']}
         ]
       }
     },
@@ -160,6 +161,7 @@ module.exports = function (grunt) {
       'uglify:build',
       'concat:build',
       'pug:build',
+      'generateSiteMap',
       'clean:tmp'
     ]);
 
@@ -181,7 +183,7 @@ module.exports = function (grunt) {
       'apacheBuild'
     ]);
 
-  // ftp transfer
+  // FTP transfer task
   grunt.registerTask('deploy', 'A simple task that ftp\'s stuff.', function (){
 
     if(grunt.option('full')){
@@ -195,5 +197,25 @@ module.exports = function (grunt) {
         'ftp_push:justfiles'
       ]);
     }
+  });
+
+  // Google Sitemap builder, outputs .txt format
+  grunt.registerTask('generateSiteMap', 'Builds the sitemap.txt', function() {
+
+    var sitemap = '',
+        sitemapFilename = './build/sitemap.txt',
+        host = 'http://www.wolfhound.ie',
+        newline = '\n';
+
+    // constructs sitemap from list of pages & articles
+    _.each(siteconfig.pages, function(page){
+      sitemap += host + page.link + newline;
+    });
+
+    _.each(articles, function(article){
+      sitemap += host + article.link + newline;
+    });
+
+    grunt.file.write(sitemapFilename, sitemap);
   });
 };
