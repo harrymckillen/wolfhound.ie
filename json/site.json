@@ -43,6 +43,12 @@
       "menulink": true
     },
     {
+      "title": "Archive of Articles",
+      "link": "/articles/archive.html",
+      "type": "page",
+      "menulink": false
+    },
+    {
       "title": "Contact",
       "link": "/contact.html",
       "type": "page",
