@@ -34,5 +34,8 @@
     "grunt-phantom": "^0.2.1",
     "grunt-processhtml": "~0.3.8"
   },
-  "homepage": "https://github.com/harrymckillen/www.wolfhound.ie"
+  "homepage": "https://github.com/harrymckillen/www.wolfhound.ie",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
 }
