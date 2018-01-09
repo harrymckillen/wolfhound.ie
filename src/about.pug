@@ -7,42 +7,39 @@ block variables
 block content
   h1 #{pagetitle}
 
-  p My name is Harry, I currently work for the <a href="https://www.aerlingus.com">Aer Lingus</a> Digital Team as the <em>UI Team Lead</em>.
+  div(ng-cloak my-cv)
 
-  h2 Background
+    span(ng-if="errorLoadingCV" class="error-message") Something went wrong, we couldn't contact github!
 
-  p My background is in Computer Science. I studied in the <em>University of Limerick</em>. There I specialised in <em>Software Engineering</em>. While I covered a lot of different topics, Development was definitely my favourite. Prior to attending University I loved computers as a kid, be it playing games or just simply tinkering with them, figuring out how they work. From a very young age I was hooked, so I'm delighted I can spend every day doing what I enjoy.
+    div(ng-if="!errorLoadingCV")
 
-  h2 Experience
+      p My name is {{generalInfo.name}}, I currently work for <em>{{currentRole.company}}</em> as a <em>{{currentRole.role}}</em>.
 
-  p I have <em>9 years</em> of professional development experience, in a variety of company types and industries. I have an additional <em>5 years</em> experience in freelance development. During that time I have experimented with a lot of programming languages, frameworks, libraries etc. The core of what I do now is JavaScript. Which is odd, in that I originally studied it as an aside to a module about Document Architecture, specifically relating to XML.
+      h2 Bio
 
-  h2 Core Skills
+      p {{generalInfo.bio}}
 
-  p <em>Programming / Scripting / Data Structures</em>: JavaScript (AngularJS, JSON, jQuery), HTML5, CSS/3 (Sass, Less), XML, COBOL, C#, VB 6, Classic ASP, C++, Java
 
-  p <em>Version Control</em>: Git, Subversion
+      h2 Skills
 
-  p <em>Content Management Systems</em>: Drupal, WordPress, TERMINALFOUR Site Manager, Umbraco, Expression Engine
+      p Below is how I feel I rank with the respective technologies/skills I've acquired over my career to date. And while many may rank as expert, it doesn't mean I know absolutely everything there is to know about them, only that I am comfortable to be able to learn what I need to in order to fill in those gaps.
 
-  p <em>Special Interest</em>: Content Management Systems, Web Design, Web Accessibility, User Experience (UX) Development.
+      +skills
 
-  p <em>Databases</em>: MySQL 4/5, Oracle 8/9/10g/11g, Microsoft SQL Server 7/2000/2005
+    h2 Some nice things people have said about me
 
-  p <em>Operating Systems</em>: Windows, Various Linux/Unix Distributions, including Debian based i.e. Ubuntu &amp; Linux Mint, Red Hat Enterprise (3,4,5), Sun Solaris, SuSE and Mac OSX
+    blockquote
+      p I have worked closely with many IT professionals throughout my digital career and Harry stands out as being one of the best.
 
-  p (above is listed in order of familiarity, with most knowledgeable first)
+    p Michelle Sheehan, Digital Marketing Manager, 123.ie <em>(from my <a href="https://www.linkedin.com/in/harrymckillen" target="_blank">LinkedIn</a>)</em>
 
-  h2 Some nice things people have said about me
+    blockquote
+      p A skilled web developer with a solid body of experience. Hard working and dedicated to a fault, Harry is also highly approachable and helpful.
 
-  blockquote
-    p I have worked closely with many IT professionals throughout my digital career and Harry stands out as being one of the best.
+    p Diarmuid Power, Senior Software Engineer, TERMINALFOUR <em>(also from my <a href="https://www.linkedin.com/in/harrymckillen" target="_blank">LinkedIn</a>)</em>
 
-  p Michelle Sheehan, Digital Marketing Manager, 123.ie <em>(from my <a href="https://www.linkedin.com/in/harrymckillen" target="_blank">LinkedIn</a>)</em>
+    //- h2 Experience
 
-  blockquote
-    p A skilled web developer with a solid body of experience. Hard working and dedicated to a fault, Harry is also highly approachable and helpful.
+    //- p I have <em>9 years</em> of professional development experience, in a variety of company types and industries. I have an additional <em>5 years</em> experience in freelance development. During that time I have experimented with a lot of programming languages, frameworks, libraries etc. The core of what I do now is JavaScript. Which is odd, in that I originally studied it as an aside to a module about Document Architecture, specifically relating to XML.
 
-  p Diarmuid Power, Senior Software Engineer, TERMINALFOUR <em>(also from my <a href="https://www.linkedin.com/in/harrymckillen" target="_blank">LinkedIn</a>)</em>
-
-  p To see some of projects I have been involved in, <a href="/work.html">check out the Work section</a>.
+    p To see some of projects I have been involved in, <a href="/work.html">check out the Work section</a>.

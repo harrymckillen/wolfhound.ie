@@ -1,0 +1,22 @@
+mixin skills
+  div.skills
+    div.a-row
+      div.skill-level-header
+        span Beginner
+      div.skill-level-header
+        span Intermediate
+      div.skill-level-header.last
+        span Expert
+    ul
+      li(ng-repeat="parent in skillset")
+        div(ng-style="{'width': parent.proficiency === 100 ? parent.proficiency - 0.01 +'%' : parent.proficiency +'%'}" ng-init="showChild = false" ng-click="showChild = !showChild" ng-class="{'cursor': parent.related, 'selectedParent': showChild && parent.related}") {{ parent.skill }}
+          span(ng-if="!showChild && parent.related") +
+          span(ng-if="showChild && parent.related") -
+        ul(ng-if="showChild")
+          li(ng-repeat="child in parent.related")
+            div(ng-style="{'width': child.proficiency === 100 ? child.proficiency - 0.01 +'%' : child.proficiency +'%'}" ng-init="showGrandChild = false" ng-click="showGrandChild = !showGrandChild" ng-class="{'cursor': child.related, 'selectedChild': showChild && parent.related, 'selectedChild': showGrandChild && parent.related}")  {{ child.skill }}
+              span(ng-if="!showGrandChild && child.related") +
+              span(ng-if="showGrandChild && child.related") -
+            ul(ng-if="showGrandChild")
+              li(ng-repeat="grandchild in child.related")
+                div(ng-style="{'width': grandchild.proficiency === 100 ? grandchild.proficiency - 0.01 +'%' : grandchild.proficiency +'%'}") {{ grandchild.skill }}

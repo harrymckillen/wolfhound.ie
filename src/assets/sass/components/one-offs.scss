@@ -100,3 +100,63 @@
     line-height: $std-padding*10;
   }
 }
+
+// skill lists
+.skills {
+  .skill-level-header {
+    border-right: 2px solid $primaryForegroundColour;
+    width: 33%;
+    float:left;
+
+    &.last{
+      width: 34%;
+    }
+    span{
+      display: inline-block;
+      padding: 5px;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: 5px;
+      list-style: none;
+
+      div {
+        padding: 0.5em;
+        display: inline-block;
+        color: $mainBackgroundColour;
+        background: $primaryForegroundColour;
+
+        /* &.selectedParent {
+          background: $blue;
+        }
+
+        &.selectedChild {
+          background: rgba($blue, 0.8)
+        } */
+
+
+        span {
+          float:right;
+          font-size: 2em;
+          font-weight: bold;
+        }
+      }
+
+      > ul {
+        margin-top: 5px;
+
+        li {
+
+          > ul {
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}
