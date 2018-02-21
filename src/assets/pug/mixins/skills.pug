@@ -14,9 +14,9 @@ mixin skills
           span(ng-if="showChild && parent.related") -
         ul(ng-if="showChild")
           li(ng-repeat="child in parent.related")
-            div(ng-style="{'width': child.proficiency === 100 ? child.proficiency - 0.01 +'%' : child.proficiency +'%'}" ng-init="showGrandChild = false" ng-click="showGrandChild = !showGrandChild" ng-class="{'cursor': child.related, 'selectedChild': showChild && parent.related, 'selectedChild': showGrandChild && parent.related}")  {{ child.skill }}
+            div(ng-style="{'width': child.proficiency === 100 ? child.proficiency - 0.01 +'%' : child.proficiency +'%'}" ng-init="showGrandChild = false" ng-click="showGrandChild = !showGrandChild" ng-class="{'cursor': child.related, 'selectedChild': showChild && parent.related, 'selectedChild': showGrandChild && parent.related}") &searr; &nbsp; {{ child.skill }}
               span(ng-if="!showGrandChild && child.related") +
               span(ng-if="showGrandChild && child.related") -
             ul(ng-if="showGrandChild")
               li(ng-repeat="grandchild in child.related")
-                div(ng-style="{'width': grandchild.proficiency === 100 ? grandchild.proficiency - 0.01 +'%' : grandchild.proficiency +'%'}") {{ grandchild.skill }}
+                div(ng-style="{'width': grandchild.proficiency === 100 ? grandchild.proficiency - 0.01 +'%' : grandchild.proficiency +'%'}") &nbsp; &rarr; &nbsp; {{ grandchild.skill }}
