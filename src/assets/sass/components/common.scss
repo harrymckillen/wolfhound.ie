@@ -3,7 +3,7 @@
 %link {
   padding:0 1px 1px 1px;
   text-decoration: underline rgba($primaryForegroundColour, 0.5);
-  text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
   cursor: pointer;
   color: $primaryForegroundColour;
   @include transition(all 0.2s linear);
