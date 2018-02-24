@@ -17,7 +17,7 @@
     a {
       text-decoration: none;
       color: $primaryForegroundColour;
-      text-decoration-skip: ink;
+      text-decoration-skip-ink: auto;
       &:hover {
 
         h2 {
