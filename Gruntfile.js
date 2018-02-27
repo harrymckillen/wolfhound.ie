@@ -139,7 +139,7 @@ module.exports = function (grunt) {
   });
 
   // Load NPM Tasks
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -180,7 +180,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default',
     [
-      'apacheBuild'
+      'justBuild'
     ]);
 
   // FTP transfer task

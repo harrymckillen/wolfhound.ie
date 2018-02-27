@@ -32,7 +32,8 @@
     "grunt-ftp-push": "~0.4.4",
     "grunt-ng-annotate": "^2.0.2",
     "grunt-phantom": "^0.2.1",
-    "grunt-processhtml": "~0.3.8"
+    "grunt-processhtml": "~0.3.8",
+    "grunt-sass": "^2.1.0"
   },
   "homepage": "https://github.com/harrymckillen/www.wolfhound.ie",
   "dependencies": {
