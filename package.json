@@ -2,6 +2,9 @@
   "name": "www.wolfhound.ie",
   "version": "1.0.0",
   "description": "wolfhound.ie website",
+  "scripts": {
+    "test": "echo \"Need to write tests\" && exit 1"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/harrymckillen/www.wolfhound.ie.git"
