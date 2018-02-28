@@ -6,34 +6,16 @@ module.exports = function (grunt) {
   'use script';
 
   var _ = require('lodash');
-  var hosts = grunt.file.readJSON('json/hosts.json');
   var siteconfig = grunt.file.readJSON('json/site.json');
   var articles = grunt.file.readJSON('json/articles.json');
   var appjs = grunt.file.readJSON('json/appjs.json');
   var timestamp = Date.now();
 
+
+
   // Configs
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    ftp_push: {
-      options: {
-        authKey: "live",
-        host: hosts.live.remoteurl,
-        dest: hosts.live.remotedir,
-        port: 21,
-        debug: false
-      },
-      full: {
-        files: [
-          {expand: true, cwd: 'build', src: ['**/*', '.htaccess']}
-        ]
-      },
-      justfiles: {
-        files: [
-          {expand: true, cwd: 'build', src: ['**/*.html', '**/*.css', '**/*.js', '**/*.txt', '**/*.php', '**/*.json', '.htaccess']}
-        ]
-      }
-    },
     copy: {
       build: {
         files: [
@@ -185,6 +167,29 @@ module.exports = function (grunt) {
 
   // FTP transfer task
   grunt.registerTask('deploy', 'A simple task that ftp\'s stuff.', function (){
+
+    var hosts = grunt.file.readJSON('json/hosts.json');
+    grunt.initConfig({
+      ftp_push: {
+        options: {
+          authKey: "live",
+          host: hosts.live.remoteurl,
+          dest: hosts.live.remotedir,
+          port: 21,
+          debug: false
+        },
+        full: {
+          files: [
+            {expand: true, cwd: 'build', src: ['**/*', '.htaccess']}
+          ]
+        },
+        justfiles: {
+          files: [
+            {expand: true, cwd: 'build', src: ['**/*.html', '**/*.css', '**/*.js', '**/*.txt', '**/*.php', '**/*.json', '.htaccess']}
+          ]
+        }
+      }
+    });
 
     if(grunt.option('full')){
       //pushes everything, images, etc.
