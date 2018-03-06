@@ -26,6 +26,18 @@ module.exports = function (grunt) {
         ]
       }
     },
+    karma: {
+      unit: {
+        files: [
+          { src: ['test/**/*.js'] }
+        ],
+        frameworks: ['jasmine'],
+        port: 9999,
+        singleRun: true,
+        browsers: ['Chrome'],
+        logLevel: 'ERROR'
+      }
+    },
     sass: {
       build: {
         options: {
@@ -132,6 +144,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-ftp-push');
   grunt.loadNpmTasks('grunt-contrib-pug');
   grunt.loadNpmTasks('grunt-ng-annotate');
+  grunt.loadNpmTasks('grunt-karma');
 
   // Registered Tasks
   grunt.registerTask('justBuild',

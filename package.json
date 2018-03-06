@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "wolfhound.ie website",
   "scripts": {
-    "test": "echo \"Need to write tests\" && exit 1"
+    "test": "grunt karma"
   },
   "repository": {
     "type": "git",
@@ -33,10 +33,15 @@
     "grunt-contrib-uglify": "^0.7.0",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-ftp-push": "~0.4.4",
+    "grunt-karma": "^2.0.0",
     "grunt-ng-annotate": "^2.0.2",
     "grunt-phantom": "^0.2.1",
     "grunt-processhtml": "~0.3.8",
-    "grunt-sass": "^2.1.0"
+    "grunt-sass": "^2.1.0",
+    "jasmine-core": "^3.1.0",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1"
   },
   "homepage": "https://github.com/harrymckillen/www.wolfhound.ie",
   "dependencies": {
