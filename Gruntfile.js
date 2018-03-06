@@ -34,7 +34,7 @@ module.exports = function (grunt) {
         frameworks: ['jasmine'],
         port: 9999,
         singleRun: true,
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS'],
         logLevel: 'ERROR'
       }
     },
