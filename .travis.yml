@@ -1,8 +1,9 @@
 language: node_js
 node_js:
   - "6"
+sudo: required
 addons:
-chrome: stable # have Travis install chrome stable.
+  chrome: stable # have Travis install chrome stable.
 before_install: npm install -g grunt-cli
 install: npm install
 before_script: grunt justBuild
