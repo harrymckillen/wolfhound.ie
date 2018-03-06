@@ -1,4 +1,6 @@
-# www.wolfhound.ie
+# Wolfhound
+
+[![Build Status](https://travis-ci.org/harrymckillen/wolfhound.ie.svg?branch=master)](https://travis-ci.org/harrymckillen/wolfhound.ie)
 
 This is the README for the www.wolfhound.ie repo. 
 
