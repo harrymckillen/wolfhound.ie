@@ -167,6 +167,11 @@ module.exports = function (grunt) {
       'watch'
     ]);
 
+  grunt.registerTask('test',
+    [
+      'karma:unit'
+    ])
+
   grunt.registerTask('apacheBuild',
     [
       'justBuild',
