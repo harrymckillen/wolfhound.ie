@@ -2,9 +2,9 @@
   "js": [
     "tmp/appjs/scripts/thirdparty/jquery-1.10.2.min.js",
     "tmp/appjs/scripts/thirdparty/lodash.min.js",
-    "tmp/appjs/scripts/thirdparty/angular-1.5.8/angular.min.js",
-    "tmp/appjs/scripts/thirdparty/angular-1.5.8/angular-cookies.min.js",
-    "tmp/appjs/scripts/thirdparty/angular-1.5.8/angular-touch.min.js",
+    "tmp/appjs/scripts/thirdparty/angular-1.6.7/angular.min.js",
+    "tmp/appjs/scripts/thirdparty/angular-1.6.7/angular-cookies.min.js",
+    "tmp/appjs/scripts/thirdparty/angular-1.6.7/angular-touch.min.js",
     "tmp/appjs/scripts/thirdparty/ngtweet.min.js",
     "tmp/appjs/scripts/custom/ga.js",
     "tmp/appjs/scripts/constants.js",
