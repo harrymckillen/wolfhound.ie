@@ -10,12 +10,12 @@ module.exports = function (grunt) {
   var articles = grunt.file.readJSON('json/articles.json');
   var appjs = grunt.file.readJSON('json/appjs.json');
   var timestamp = Date.now();
+  var pkg = grunt.file.readJSON('package.json');
 
 
 
   // Configs
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
     copy: {
       build: {
         files: [
@@ -29,7 +29,11 @@ module.exports = function (grunt) {
     karma: {
       unit: {
         files: [
-          { src: ['test/**/*.js'] }
+          { src: [
+            'build/assets/scripts/wolfhound.app.js',
+            'src/assets/scripts/thirdparty/angular-1.6.7/angular-mocks.js',
+            'test/**/*.js'
+            ] }
         ],
         frameworks: ['jasmine'],
         port: 9999,
@@ -97,7 +101,7 @@ module.exports = function (grunt) {
     },
     watch: {
       files: ["src/**/*", "src/.htaccess", "json/**/*"],
-      tasks: ['justBuild']
+      tasks: ['build']
     },
     ngAnnotate: {
       build: {
@@ -122,7 +126,7 @@ module.exports = function (grunt) {
     concat: {
       options: {
         stripBanners: true,
-        banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+        banner: '/*!' + pkg.name + ' - v' + pkg.version + ' - ' +
           '<%= grunt.template.today("yyyy-mm-dd") %> */',
       },
       build: {
@@ -147,7 +151,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-karma');
 
   // Registered Tasks
-  grunt.registerTask('justBuild',
+  grunt.registerTask('build',
     [
       'clean:build',
       'sass:build',
@@ -157,30 +161,27 @@ module.exports = function (grunt) {
       'concat:build',
       'pug:build',
       'generateSiteMap',
-      'clean:tmp'
+      'generateVersionTxt',
+      'clean:tmp',
+      'karma:unit'
     ]);
 
-  grunt.registerTask('localServer',
+  grunt.registerTask('localServe',
     [
-      'justBuild',
+      'build',
       'connect',
       'watch'
     ]);
 
-  grunt.registerTask('test',
+  grunt.registerTask('serve',
     [
-      'karma:unit'
-    ])
-
-  grunt.registerTask('apacheBuild',
-    [
-      'justBuild',
+      'build',
       'watch'
     ]);
 
   grunt.registerTask('default',
     [
-      'justBuild'
+      'build'
     ]);
 
   // FTP transfer task
@@ -220,6 +221,15 @@ module.exports = function (grunt) {
         'ftp_push:justfiles'
       ]);
     }
+  });
+
+  // Create version.txt from pkg.version
+  grunt.registerTask('generateVersionTxt', 'Builds the version.txt', function() {
+
+    var version = 'Version: ' + pkg.version,
+        versionFilename = './build/version.txt';
+
+    grunt.file.write(versionFilename, version);
   });
 
   // Google Sitemap builder, outputs .txt format
