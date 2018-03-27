@@ -1,6 +1,6 @@
 {
   "name": "www.wolfhound.ie",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "wolfhound.ie website",
   "scripts": {
     "test": "grunt karma"
