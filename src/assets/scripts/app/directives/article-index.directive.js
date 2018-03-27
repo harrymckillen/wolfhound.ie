@@ -43,13 +43,12 @@ angular.module('wolfhound.directives')
           'text': parseCookie.text
         };
       }
-
       // load articles from dataService
-      dataService.getArticles().then(function (data) {
+      dataService.getArticles().then(function (response) {
 
         // assigns it to articles scope variable, immediately
           // reverses the array to display newest first
-          $scope.articles = data.reverse();
+          $scope.articles = response.data.reverse();
           $scope.newestFirst = true;
 
           // hides loading message

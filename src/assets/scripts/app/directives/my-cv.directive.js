@@ -9,15 +9,14 @@ angular.module('wolfhound.directives')
     controller: function ($scope){
 
       // load CV from dataService
-      dataService.getGithubCv().then(function (data) {
+      dataService.getGithubCv().then(function (response) {
 
         // assign returned data to cv scope variable
-        $scope.generalInfo = data.general;
-
-        $scope.skillset = data.skills;
+        $scope.generalInfo = response.data.general;
+        $scope.skillset = response.data.skills;
 
         // find current role
-        _.forEach(data.experience, function(role) {
+        _.forEach(response.data.experience, function(role) {
           if (role.current){
             $scope.currentRole = role;
           }

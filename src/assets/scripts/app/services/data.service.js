@@ -9,13 +9,17 @@ angular.module('wolfhound.services')
 
       var deferred = $q.defer();
 
-      $http.get('/assets/json/articles.json')
-        .success(function (response) {
-          deferred.resolve(response);
-        })
-        .error(function (){
-          deferred.reject();
-        });
+      $http({
+        method: 'GET',
+        url: '/assets/json/articles.json'
+      }).then(function successCallback(response) {
+
+        deferred.resolve(response);
+
+        }, function errorCallback(response) {
+
+        deferred.reject();
+      });
 
       return deferred.promise;
     },
@@ -23,13 +27,17 @@ angular.module('wolfhound.services')
 
       var deferred = $q.defer();
 
-      $http.get('https://raw.githubusercontent.com/harrymckillen/cv/master/details.json')
-        .success(function (response) {
-          deferred.resolve(response);
-        })
-        .error(function (){
-          deferred.reject();
-        });
+      $http({
+        method: 'GET',
+        url: 'https://raw.githubusercontent.com/harrymckillen/cv/master/details.json'
+      }).then(function successCallback(response) {
+
+        deferred.resolve(response);
+
+        }, function errorCallback(response) {
+
+        deferred.reject();
+      });
 
       return deferred.promise;
     }

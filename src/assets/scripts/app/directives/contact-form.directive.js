@@ -55,8 +55,12 @@ angular.module('wolfhound.directives')
             'env': $scope.env
           };
 
-          $http.post('/php/contact.php', $scope.submission)
-          .success(function (response) {
+          $http({
+            method: 'POST',
+            url: '/php/contact.php',
+            data: $scope.submission
+          }).then(function successCallback(response) {
+
             if(response.status === 'huzzah'){
               $scope.showSuccess = true;
 
@@ -70,12 +74,15 @@ angular.module('wolfhound.directives')
                 _gaq.push(['_trackEvent', 'Contact Form', 'Send', 'Successful ;)']);
               }
             }
-          })
-          .error(function () {
+
+            }, function errorCallback(response) {
+
             if(window._gaq){
               _gaq.push(['_trackEvent', 'Contact Form', 'Error', 'Sending the message failed']);
             }
           });
+
+
         } else {
           angular.forEach($scope.showError, function(value, key) {
             formObject[key].$invalid ? $scope.showError[key] = true : $scope.showError[key] = false;

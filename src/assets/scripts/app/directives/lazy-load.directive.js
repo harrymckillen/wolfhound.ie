@@ -22,8 +22,10 @@ angular.module('wolfhound.directives')
           attr.image !== attr.src){
 
           // get image from attr.image
-          $http.get(attr.image)
-          .success(function (response) {
+          $http({
+            method: 'GET',
+            url: attr.image
+          }).then(function successCallback(response) {
 
             // if found, set src to image attr
             attr.$set('src', attr.image);
@@ -33,13 +35,13 @@ angular.module('wolfhound.directives')
               attr.$set('status', 'loaded');
             }, 100);
 
-          })
-          .error(function () {
+          }, function errorCallback(response) {
 
             // if not found, set fallback image, and status to not found
             attr.$set('src', fallbackImage);
             attr.$set('status', 'not-found');
           });
+
         }
       }
 
