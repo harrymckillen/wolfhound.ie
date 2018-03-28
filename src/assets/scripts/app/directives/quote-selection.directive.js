@@ -9,7 +9,10 @@ angular.module('wolfhound.directives')
       link: function (scope, elem) {
 
         // local variables
+        var twitterHandle = '@_hmck';
+        var tweetAppend = '..." ' + twitterHandle;
         var defaultValue = 'Nothing selected';
+        var tweetMaxLength = 280;
 
         //scope variables
         scope.tweet = defaultValue;
@@ -18,10 +21,10 @@ angular.module('wolfhound.directives')
         var tweetWrapper = function (tweetText) {
           var tweet;
 
-          if(tweetText.length > 128){
-            tweet = "\"" + tweetText.substring(0, 128) + "...\" @_hmck";
+          if(tweetText.length > (tweetMaxLength - tweetAppend.length)){
+            tweet = '"' + tweetText.substring(0, tweetMaxLength - tweetAppend.length) + tweetAppend;
           } else {
-            tweet = "\"" + tweetText + "\" @_hmck";
+            tweet = '"' + tweetText + '"' + twitterHandle;
           }
           return tweet;
         }
