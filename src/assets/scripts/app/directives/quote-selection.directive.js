@@ -24,7 +24,7 @@ angular.module('wolfhound.directives')
           if(tweetText.length > (tweetMaxLength - tweetAppend.length)){
             tweet = '"' + tweetText.substring(0, tweetMaxLength - tweetAppend.length) + tweetAppend;
           } else {
-            tweet = '"' + tweetText + '"' + twitterHandle;
+            tweet = '"' + tweetText + '" ' + twitterHandle;
           }
           return tweet;
         }
