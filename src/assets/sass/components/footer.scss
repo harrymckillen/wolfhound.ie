@@ -8,8 +8,8 @@
   }
 
   span {
-    font-family: 'WMD Logo';
-    font-size: 1.4em;
+    margin: 0 auto;
+    @include wolfhound-logo ('35', '35', $primaryForegroundColour);
   }
   .copyright {
     font-size: 0.6em;
