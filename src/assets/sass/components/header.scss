@@ -12,6 +12,9 @@
     .icon {
       @include wolfhound-logo ('55', '55', $primaryForegroundColour);
 
+      &:hover{
+        @include wolfhound-logo ('55', '55', $black);
+      }
       &.show {
         @include wolfhound-logo ('55', '55', $menuForegroundColour);
       }
