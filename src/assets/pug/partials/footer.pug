@@ -2,7 +2,7 @@ if !footerHidden
   footer
     div.footer
       span Wolfhound Logo
-      div.copyright &copy; #{site.title}, 2018
+      div.copyright &copy; #{site.title}, #{new Date().getFullYear()}
 
 div.body-overlay.show(ng-if="menuShown" ng-click="toggle()")
 div.fixed.bottom-0(cookie-warning)
