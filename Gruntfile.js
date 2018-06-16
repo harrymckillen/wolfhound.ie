@@ -206,6 +206,16 @@ module.exports = function (grunt) {
           files: [
             {expand: true, cwd: 'build', src: ['**/*.html', '**/*.css', '**/*.js', '**/*.txt', '**/*.php', '**/*.json', '.htaccess']}
           ]
+        },
+        juststyles: {
+          files: [
+            {expand: true, cwd: 'build', src: ['**/*.css']}
+          ]
+        },
+        justjs: {
+          files: [
+            {expand: true, cwd: 'build', src: ['**/*.js']}
+          ]
         }
       }
     });
@@ -214,6 +224,16 @@ module.exports = function (grunt) {
       //pushes everything, images, etc.
       grunt.task.run([
         'ftp_push:full'
+      ]);
+    } else if(grunt.option('js')){
+      //pushes just js files
+      grunt.task.run([
+        'ftp_push:justjs'
+      ]);
+    } else if(grunt.option('css')){
+      //pushes just css
+      grunt.task.run([
+        'ftp_push:juststyles'
       ]);
     } else {
       //pushes just files, i.e. html, css, and js
