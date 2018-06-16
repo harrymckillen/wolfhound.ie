@@ -118,4 +118,24 @@ article {
       display: block;
     }
   }
+
+  table {
+    td, th {
+      border:1px solid rgba($primaryForegroundColour,0.1);
+      padding: 0.5em;
+    }
+    th {
+      background: rgba($primaryForegroundColour,0.3);
+
+    }
+    td {
+      vertical-align: top;
+    }
+    .first-col, .third-col {
+      width: 25%;
+      @include mobile {
+        width:10%;
+      }
+    }
+  }
 }

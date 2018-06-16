@@ -53,6 +53,12 @@
       "link": "/contact.html",
       "type": "page",
       "menulink": true
+    },
+    {
+      "title": "Cookie Policy",
+      "link": "/cookies.html",
+      "type": "page",
+      "menulink": false
     }
   ]
 }

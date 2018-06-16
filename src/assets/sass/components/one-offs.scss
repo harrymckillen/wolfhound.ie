@@ -49,6 +49,9 @@
   .cookie-warning {
     background-color: rgba($black, 0.9);
     color: $white;
+    a {
+      color: $white;
+    }
     span {
       width: 75%;
       @include tablet {
