@@ -184,6 +184,11 @@ module.exports = function (grunt) {
       'build'
     ]);
 
+  grunt.registerTask('test',
+    [
+      'karma:unit'
+    ]);
+
   // FTP transfer task
   grunt.registerTask('deploy', 'A simple task that ftp\'s stuff.', function (){
 

@@ -1,26 +1,37 @@
 'use strict';
 
-describe('Unit testing Active Menu Link Directive', function() {
+describe('Active Menu Link Directive', function() {
   var $compile,
-      $rootScope;
+      $rootScope,
+      $location;
 
-  // Load the myApp module, which contains the directive
   beforeEach(module('wolfhound.app'));
 
-  // Store references to $rootScope and $compile
-  // so they are available to all tests in this describe block
-  beforeEach(inject(function(_$compile_, _$rootScope_){
-    // The injector unwraps the underscores (_) from around the parameter names when matching
+  beforeEach(inject(function(_$compile_, _$rootScope_, _$location_){
     $compile = _$compile_;
     $rootScope = _$rootScope_;
+    $location = _$location_;
   }));
 
-  it('Test if Link is Active', function() {
-    // Compile a piece of HTML containing the directive
-    var element = $compile("<a href="/" active-menu-link>Home</a>")($rootScope);
-    // fire all the watches, so the scope expression {{1 + 1}} will be evaluated
+  it('should be defined', function() {
+    $location.path('/')
+
+    var element = $compile('<a href="/" active-menu-link>Home</a>')($rootScope);
+
     $rootScope.$digest();
-    // Check that the compiled element contains the templated content
-    // expect(element.html()).toContain("lidless, wreathed in flame, 2 times");
+
+    expect(element).toBeDefined();
   });
+
+  it('should have active class set if path matches about page', function() {
+
+    $location.path('/about.html')
+
+    var element = $compile('<a href="/about.html" active-menu-link>About</a>')($rootScope);
+
+    $rootScope.$digest();
+
+    expect(element.attr('class')).toBe('active');
+  });
+
 });
