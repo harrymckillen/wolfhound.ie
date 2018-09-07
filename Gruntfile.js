@@ -100,7 +100,7 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      files: ["src/**/*", "src/.htaccess", "json/**/*"],
+      files: ["test/**/*", "src/**/*", "src/.htaccess", "json/**/*"],
       tasks: ['build']
     },
     ngAnnotate: {
@@ -190,15 +190,33 @@ module.exports = function (grunt) {
     ]);
 
   // FTP transfer task
-  grunt.registerTask('deploy', 'A simple task that ftp\'s stuff.', function (){
+  grunt.registerTask('deploy', 'A simple task that ftp\'s stuff.', function (target){
 
-    var hosts = grunt.file.readJSON('json/hosts.json');
+    var hosts = grunt.file.readJSON('json/hosts.json'),
+        env_host,
+        env_remotedir,
+        env_authkey;
+
+    if(target === 'live'){
+      // production env
+      env_authkey = 'live';
+      env_host = hosts.live.remoteurl;
+      env_remotedir = hosts.live.remotedir;
+      console.log('Deploying to Live Environment');
+    } else {
+      // dev env
+      env_authkey = 'dev';
+      env_host = hosts.dev.remoteurl;
+      env_remotedir = hosts.dev.remotedir;
+      console.log('Deploying to Dev Environment');
+    }
+
     grunt.initConfig({
       ftp_push: {
         options: {
-          authKey: "live",
-          host: hosts.live.remoteurl,
-          dest: hosts.live.remotedir,
+          authKey: env_authkey,
+          host: env_host,
+          dest: env_remotedir,
           port: 21,
           debug: false
         },
