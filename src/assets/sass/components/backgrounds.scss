@@ -15,6 +15,7 @@ html{
         right: 0;
       }
 
+      font-size: 0.8em;
       display: block;
       position: relative;
       height: 400px;
@@ -33,6 +34,7 @@ html{
         background-image: url(../img/dunamaise-desktop.JPG);
       }
       @include tablet {
+        font-size: 1em;
         background-image: url(../img/dunamaise-tablet.JPG);
       }
       @include mobile {
