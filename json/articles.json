@@ -22,5 +22,13 @@
     "link": "/articles/above-the-fold.html",
     "categories": "Opinion",
     "intro": "Many of us will know what above the fold means in relation to print design. It refers to the top section of a broadsheet when folded, which is typically visible to a customer in a newsagents for example."
+  },
+  {
+    "issue": 4,
+    "date": 1542372181861,
+    "title": "A short journey through some Web Development Project methodologies",
+    "link": "/articles/development-project-methodologies.html",
+    "categories": "Opinion",
+    "intro": "First off, this is an opinion piece. It’s not a definitive critique of all development processes, it is merely representative of my experience to-date with the different theories surrounding software/web development."
   }
 ]
