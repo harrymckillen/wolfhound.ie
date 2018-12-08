@@ -106,8 +106,57 @@
 
 // skill lists
 .skills {
+  position: relative;
+
+  .parent, .child{
+    &:hover {
+      h3:after, h4:after {
+        color: lighten($primaryForegroundColour, 50%);
+        content: " (Click to expand)";
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  .bar {
+    position: absolute;
+    border-right: 2px solid lighten($primaryForegroundColour, 65%);
+    top:0;
+    height: 100%;
+    content: " ";
+    z-index: -1;
+
+    &.third{
+      left:32.9%;
+    }
+    &.twothirds{
+      left:65.9%;
+    }
+  }
+
+  .expand {
+    margin-top: 20px;
+    float:right;
+
+    &.down{
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 5px 0 5px;
+      border-color: $primaryForegroundColour transparent transparent transparent;
+    }
+    &.up{
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 5px 5px 5px;
+      border-color: transparent transparent $primaryForegroundColour transparent;
+    }
+  }
+  .a-row{
+    border-bottom: 2px solid $primaryForegroundColour;
+  }
   .skill-level-header {
-    border-right: 2px solid $primaryForegroundColour;
     width: 33%;
     float:left;
 
@@ -120,6 +169,12 @@
     }
   }
 
+  h3, h4, h5 {
+    margin: 1em 0 0 0;
+    font-size: 75%;
+    display: inline-block;
+  }
+
   ul {
     margin: 0;
     padding: 0;
@@ -128,26 +183,20 @@
       margin-bottom: 5px;
       list-style: none;
 
-      div {
+      div.skill {
         padding: 0.5em;
-        display: inline-block;
+        display: block;
+        height: 15px;
         color: $mainBackgroundColour;
         background: $primaryForegroundColour;
 
-        /* &.selectedParent {
-          background: $blue;
+        &.child {
+          background: lighten($primaryForegroundColour, 20%);
+        }
+        &.grandchild {
+          background: lighten($primaryForegroundColour, 45%);
         }
 
-        &.selectedChild {
-          background: rgba($blue, 0.8)
-        } */
-
-
-        span {
-          float:right;
-          font-size: 2em;
-          font-weight: bold;
-        }
       }
 
       > ul {
