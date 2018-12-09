@@ -14,7 +14,7 @@ angular.module('wolfhound.directives')
         'I have a glaring spelling/grammar mistake somewhere'
       ];
 
-      if($location.path() === '/hire-me'){
+      if($location.hash() === 'hire-me'){
         $scope.query = $scope.queryOptions[0];
       }
 

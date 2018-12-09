@@ -107,6 +107,7 @@
 // skill lists
 .skills {
   position: relative;
+  margin-bottom: 20px;
 
   .parent, .child{
     &:hover {
@@ -166,6 +167,9 @@
     span{
       display: inline-block;
       padding: 5px;
+      @include tablet {
+        font-size: 0.8em;
+      }
     }
   }
 
