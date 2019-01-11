@@ -5,6 +5,7 @@
   font-family: $header-font;
   letter-spacing: -2px;
   text-transform: uppercase;
+  display: block;
 
   @include superwide {
     font-size: 5em;
