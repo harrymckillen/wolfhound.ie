@@ -1,7 +1,7 @@
 if !footerHidden
   footer
     div.footer
-      span Wolfhound Logo
+      img(class="logo" src="/assets/svg/wolfhound-logo.svg")
       div.copyright &copy; #{site.title}, #{new Date().getFullYear()}
 
 div.body-overlay.show(ng-if="menuShown" ng-click="toggle()")

@@ -7,9 +7,10 @@
     bottom: 0;
   }
 
-  span {
-    margin: 0 auto;
-    @include wolfhound-logo ('35', '35', $primaryForegroundColour);
+  .logo {
+    vertical-align: center;
+    width: 35px;
+    height: 35px;
   }
   .copyright {
     font-size: 0.6em;

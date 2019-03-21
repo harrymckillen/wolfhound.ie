@@ -9,25 +9,20 @@
       text-shadow: 0px  0px 3px $black;
     }
 
-    .icon {
-      @include wolfhound-logo ('55', '55', $primaryForegroundColour);
-
-      &:hover{
-        @include wolfhound-logo ('55', '55', $black);
-      }
-
-      &.show {
-        @include wolfhound-logo ('55', '55', $menuForegroundColour);
-      }
-    }
-
     a {
       display: block;
       text-decoration: none;
       padding: 0;
       border: none;
+
       &:hover, &:active, &:focus {
         outline: 0;
+      }
+
+      .wolfhound-logo {
+        vertical-align: center;
+        width: 55px;
+        height: 55px;
       }
     }
 
