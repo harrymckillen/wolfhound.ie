@@ -8,7 +8,7 @@ angular.module('wolfhound.directives')
     link: function (scope, elem, attr){
 
       // local variables
-      var images = document.getElementsByTagName('img');
+      var images = document.querySelectorAll("img[image]");
       var galleryItems = [];
       var keymap = _.clone(window.constants.keymap || {});
 
