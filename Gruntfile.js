@@ -190,7 +190,7 @@ module.exports = function (grunt) {
     ]);
 
   // FTP transfer task
-  grunt.registerTask('deploy', 'A simple task that ftp\'s stuff.', function (target){
+  grunt.registerTask('deploy', 'A simple task that ftp\'s stuff. Use target :live for Prod, otherwise, Dev', function (target){
 
     var hosts = grunt.file.readJSON('json/hosts.json'),
         env_host,
