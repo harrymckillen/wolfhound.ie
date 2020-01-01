@@ -87,4 +87,17 @@
       }
     }
   }
+
+  .help-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    @include tablet {
+      margin-top: 15px;
+      position: relative;
+    }
+  }
 }
+
