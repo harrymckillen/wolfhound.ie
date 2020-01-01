@@ -1,10 +1,11 @@
 extends ../pug/html.pug
 
 block variables
-  - var pagetitle = '400 - Bad Request';
+  - var pagetitle = 'Bad Request';
   - var footerHidden = true;
 
 block content
   h1 #{pagetitle}
+  +error-page('400')
   p Well something went wrong along the way.
 

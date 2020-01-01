@@ -1,11 +1,11 @@
 extends ../pug/html.pug
 
 block variables
-  - var pagetitle = '404 - Page Not Found';
+  - var pagetitle = 'Page Not Found';
   - var footerHidden = true;
 
 block content
   h1 #{pagetitle}
+  +error-page('404')
   p We couldn't find the page you're looking for.
 
-  +error-page-form('404')

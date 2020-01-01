@@ -1,10 +1,11 @@
 extends ../pug/html.pug
 
 block variables
-  - var pagetitle = '500 - Internal Server Error';
+  - var pagetitle = 'Internal Server Error';
   - var footerHidden = true;
 
 block content
   h1 #{pagetitle}
+  +error-page('500')
   p Oops. There's been a server error. We don't know what the problem is.
 
