@@ -166,14 +166,14 @@ module.exports = function (grunt) {
       'karma:unit'
     ]);
 
-  grunt.registerTask('localServe',
+  grunt.registerTask('serve',
     [
       'build',
       'connect',
       'watch'
     ]);
 
-  grunt.registerTask('serve',
+  grunt.registerTask('serveApache',
     [
       'build',
       'watch'
