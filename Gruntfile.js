@@ -40,7 +40,7 @@ module.exports = function (grunt) {
         frameworks: ['jasmine'],
         port: 9999,
         singleRun: true,
-        browsers: ['PhantomJS'],
+        browsers: ['ChromeHeadless'],
         logLevel: 'ERROR'
       }
     },
@@ -147,7 +147,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-ftp-push');
   grunt.loadNpmTasks('grunt-contrib-pug');
   grunt.loadNpmTasks('grunt-ng-annotate');
