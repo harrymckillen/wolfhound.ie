@@ -1,6 +1,5 @@
 {
   "js": [
-    "tmp/appjs/scripts/thirdparty/jquery-1.10.2.min.js",
     "tmp/appjs/scripts/thirdparty/lodash.min.js",
     "tmp/appjs/scripts/thirdparty/angular-1.6.7/angular.min.js",
     "tmp/appjs/scripts/thirdparty/angular-1.6.7/angular-cookies.min.js",

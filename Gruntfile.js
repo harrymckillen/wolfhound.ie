@@ -37,6 +37,18 @@ module.exports = function (grunt) {
             'test/**/*.js'
             ] }
         ],
+        // preprocess matching files before serving them to the browser
+        preprocessors: {
+          'build/assets/scripts/wolfhound.app.js': ['coverage']
+        },
+
+        coverageReporter: {
+          type: 'text-summary',
+          dir: 'coverage/'
+        },
+
+        // test results reporter to use
+        reporters: ['progress', 'coverage'],
         frameworks: ['jasmine'],
         port: 9999,
         singleRun: true,
@@ -65,7 +77,7 @@ module.exports = function (grunt) {
     connect: {
       server: {
         options: {
-          keepalive: true,
+          livereload: true,
           hostname: 'localhost',
           port: 4000,
           base: 'build/',
@@ -172,7 +184,7 @@ module.exports = function (grunt) {
     [
       'build',
       'connect',
-      'watch'
+      'watch',
     ]);
 
   grunt.registerTask('serveApache',
