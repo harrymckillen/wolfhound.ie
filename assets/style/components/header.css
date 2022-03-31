@@ -1,0 +1,10 @@
+.wolfhound-logo {
+    margin: 15px;
+    color: pink;
+    background-color: red;
+    background-image: url(/svg/wolfhound-logo.svg);
+    background-size: 65px 65px;
+    width: 65px;
+    height: 65px;
+    border: 1px solid blue;
+}

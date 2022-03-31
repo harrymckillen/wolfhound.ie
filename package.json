@@ -1,48 +1,23 @@
 {
-  "name": "www.wolfhound.ie",
-  "version": "2.0.1",
-  "description": "wolfhound.ie website",
+  "name": "wolfhound",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "grunt karma"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/harrymckillen/www.wolfhound.ie.git"
-  },
-  "keywords": [
-    "www",
-    "css",
-    "js",
-    "html"
-  ],
-  "author": "Harry McKillen",
-  "license": "none",
-  "bugs": {
-    "url": "https://github.com/harrymckillen/www.wolfhound.ie/issues"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "grunt": "^1.1.0",
-    "grunt-contrib-clean": "^2.0.0",
-    "grunt-contrib-concat": "~1.0.1",
-    "grunt-contrib-connect": "^2.1.0",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-jshint": "^2.1.0",
-    "grunt-contrib-pug": "^2.0.0",
-    "grunt-contrib-uglify": "^4.0.1",
-    "grunt-contrib-watch": "~1.1.0",
-    "grunt-ftp-push": "~1.2.1",
-    "grunt-karma": "^4.0.0",
-    "grunt-ng-annotate": "^4.0.0",
-    "grunt-sass": "^3.1.0",
-    "jasmine-core": "^3.5.0",
-    "karma": "^5.0.1",
-    "karma-chrome-launcher": "^3.1.0",
-    "karma-coverage": "^2.0.2",
-    "karma-jasmine": "^3.1.1",
-    "node-sass": "^4.14.1"
-  },
-  "homepage": "https://github.com/harrymckillen/www.wolfhound.ie",
-  "dependencies": {
-    "lodash": "^4.17.15"
+    "@fullhuman/postcss-purgecss": "^4.1.3",
+    "autoprefixer": "^10.4.4",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.1.5",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "^2.2.19",
+    "watch": "^1.0.2"
   }
 }

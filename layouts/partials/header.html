@@ -1,0 +1,12 @@
+<div class="flex justify-between">
+    <!-- <img class="fill-current text-green-900 dark:text-white" src="/svg/wolfhound-logo.svg" alt="Wolhound Logo"> -->
+    <div class="wolfhound-logo bob bg-gray-900"></div>
+    <nav id="nav" class="flex justify-around text-center text-gray-900 dark:text-white">
+        {{ range .Site.Menus.main }}
+        <a class="mx-4" href="{{ .URL }}">
+        {{ $text := print .Name | safeHTML }}
+        {{ $text }}
+        </a>
+        {{ end }}
+    </nav>
+</div>

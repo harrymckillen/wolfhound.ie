@@ -1,0 +1,8 @@
+{{ $sass := resources.Get "sass/main.scss" }}
+{{ $style := $sass | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}"
+
+
+{{ $style := resources.Get "style/main.scss" | resources.ToCSS | postCSS (dict "config" "./postcss.config.js") | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{ $title := print .Site.Title " | " .Title }}

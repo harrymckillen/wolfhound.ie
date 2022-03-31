@@ -1,0 +1,31 @@
+/* @import "node_modules/tailwindcss/base";
+@import "node_modules/tailwindcss/components";
+@import "node_modules/tailwindcss/utilities"; */
+ 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "assets/style/components/header.css";
+@import "assets/style/components/common.css";
+
+body {
+    /* background-color: blue !important; */
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.div {
+    width: 50px;
+    height: 25px;
+}
+
+/* Custom CSS */
+a.tag {
+    @apply bg-gray-200 rounded-full px-3 py-1 font-semibold text-gray-700;
+}
+a.tag:hover {
+    @apply underline;
+}
+/* Custom CSS end */
