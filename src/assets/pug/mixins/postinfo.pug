@@ -1,9 +1,0 @@
-mixin postinfo(issueno, postdate, categories)
-  div.postinfo
-    span Issue ##{issueno}
-    span.middot &middot;
-    span(ng-bind=postdate+ " | date:'LLLL dd, yyyy'")
-    span.middot &middot;
-    span #{categories}
-    span.middot &middot;
-    span(approx-reading-time) &nbsp;

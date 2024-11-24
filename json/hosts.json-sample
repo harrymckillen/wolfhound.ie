@@ -1,6 +1,0 @@
-{
-  "dev": {
-    "remoteurl": "some.host.com",
-    "remotedir": "/path/to/root/web/folder"
-  }
-}
