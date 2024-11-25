@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Wolfhound">
 	<main>
-		Wolfhound
+		<img src="/assets/images/wolfhound-logo.svg" />Wolfhound
 	</main>
 </Layout>
 
@@ -15,9 +15,15 @@ import Layout from '../layouts/Layout.astro';
 		color: #333;
 		font-size: calc(10px + 8vmin);
 		display: flex;
+		gap: 10px;
 		align-items: center;
 		justify-content: center;
 		text-transform: uppercase;
 		font-weight: bold;
+
+		img {
+			width: calc(10px + 8vmin);
+			height: calc(10px + 8vmin);
+		}
 	}
 </style>
