@@ -1,29 +1,76 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Logo from '../components/Logo.astro';
 ---
 
 <Layout title="Wolfhound">
 	<main>
-		<img src="/assets/images/wolfhound-logo.svg" />Wolfhound
+		<div class="logo">
+			<Logo color="#FFA500" />
+			Wolfhound
+		</div>
 	</main>
 </Layout>
 
-<style>
+<style is:global>
+	/* :global(:root) { */
+	:root{
+		--color-orange: #FFA500;
+		--shadow-color: #000;
+		--shadow-size: calc(0.10vmin);
+		--breakpoint-tablet: 900px;
+	}
+	/* } */
+	
 	main {
 		width: 100vw;
 		height: 100vh;
-		color: #333;
-		font-size: calc(10px + 8vmin);
+		min-height: 100vh;
+		color: var(--color-orange);
+		font-size: calc(10px + 12vmin);
+		font-family: Arial, Helvetica, sans-serif;
+		background-color: var(--color-orange);
 		display: flex;
-		gap: 10px;
 		align-items: center;
 		justify-content: center;
 		text-transform: uppercase;
 		font-weight: bold;
 
-		img {
-			width: calc(10px + 8vmin);
-			height: calc(10px + 8vmin);
+		text-shadow: 
+		var(--shadow-color) -0.1px -0.1px,
+            var(--shadow-color) var(--shadow-size) var(--shadow-size),
+            var(--shadow-color) calc(var(--shadow-size) * 2) calc(var(--shadow-size) * 2),
+            var(--shadow-color) calc(var(--shadow-size) * 3) calc(var(--shadow-size) * 3),
+            var(--shadow-color) calc(var(--shadow-size) * 4) calc(var(--shadow-size) * 4),
+            var(--shadow-color) calc(var(--shadow-size) * 5) calc(var(--shadow-size) * 5),
+            var(--shadow-color) calc(var(--shadow-size) * 6) calc(var(--shadow-size) * 6),
+            var(--shadow-color) calc(var(--shadow-size) * 7) calc(var(--shadow-size) * 7),
+            var(--shadow-color) calc(var(--shadow-size) * 8) calc(var(--shadow-size) * 8),
+            var(--shadow-color) calc(var(--shadow-size) * 9) calc(var(--shadow-size) * 9);
+		
+		.logo {
+			height: calc(10px + 12vmin);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			flex-wrap: wrap;
+			word-break: break-all;
+			text-align: center;
 		}
 	}
+
+	@media (max-width: var(--breakpoint-tablet)) {
+        main {
+            font-size: calc(10px + 8vmin);
+            height: auto;
+            min-height: 100vh;
+            padding: 4rem 2rem;
+
+            .logo {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    }
 </style>
