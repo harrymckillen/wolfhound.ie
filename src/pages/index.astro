@@ -5,72 +5,232 @@ import Logo from '../components/Logo.astro';
 
 <Layout title="Wolfhound">
 	<main>
-		<div class="logo">
-			<Logo color="#FFA500" />
-			Wolfhound
-		</div>
+		<h1 class="glitch-wrapper">
+			<span class="glitch" data-glitch="Wolfhound">Wolfhound</span>
+		</h1>
 	</main>
 </Layout>
 
-<style is:global>
-	/* :global(:root) { */
+<style lang="scss" is:global>
+	$breakpoint-tablet: 900px;
+
 	:root{
 		--color-orange: #FFA500;
-		--shadow-color: #000;
+		--color-black: #333;
 		--shadow-size: calc(0.10vmin);
-		--breakpoint-tablet: 900px;
+		--font-family-pixel: 'Pixelify Sans', Arial, Helvetica, sans-serif;
+		--glitch-color: var(--color-orange);
+		--glitch-duration: 0.3s;
+		--glitch-intensity: 4.5;
+		--glitch-offset: 2.3px;
+		--glitch-blur: 0.45px;
+		--glitch-opacity: 0.69;
+		--glitch-bg-color: var(--color-black);
 	}
-	/* } */
 	
 	main {
 		width: 100vw;
 		height: 100vh;
 		min-height: 100vh;
 		color: var(--color-orange);
-		font-size: calc(10px + 12vmin);
-		font-family: Arial, Helvetica, sans-serif;
-		background-color: var(--color-orange);
+		font-size: calc(10px + 6vmin);
+		font-family: var(--font-family-pixel);
+		background-color: var(--color-black);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		text-transform: uppercase;
 		font-weight: bold;
+		word-break: break-all;
 
-		text-shadow: 
-		var(--shadow-color) -0.1px -0.1px,
-            var(--shadow-color) var(--shadow-size) var(--shadow-size),
-            var(--shadow-color) calc(var(--shadow-size) * 2) calc(var(--shadow-size) * 2),
-            var(--shadow-color) calc(var(--shadow-size) * 3) calc(var(--shadow-size) * 3),
-            var(--shadow-color) calc(var(--shadow-size) * 4) calc(var(--shadow-size) * 4),
-            var(--shadow-color) calc(var(--shadow-size) * 5) calc(var(--shadow-size) * 5),
-            var(--shadow-color) calc(var(--shadow-size) * 6) calc(var(--shadow-size) * 6),
-            var(--shadow-color) calc(var(--shadow-size) * 7) calc(var(--shadow-size) * 7),
-            var(--shadow-color) calc(var(--shadow-size) * 8) calc(var(--shadow-size) * 8),
-            var(--shadow-color) calc(var(--shadow-size) * 9) calc(var(--shadow-size) * 9);
-		
-		.logo {
-			height: calc(10px + 12vmin);
+		h1 {
+			margin: 0;
+		}
+
+		.glitch-wrapper {
 			display: flex;
-			align-items: center;
+			align-items: safe center;
 			justify-content: center;
-			gap: 10px;
-			flex-wrap: wrap;
-			word-break: break-all;
 			text-align: center;
+			width: 100%;
+			height: 100%;
+			overflow-y: auto;
+			overflow-x: hidden;
+			background-color: var(--glitch-bg-color);
+		}
+
+		.glitch {
+			position: relative;
+			z-index: 1;
+			font-weight: 700;
+			line-height: 1;
+			letter-spacing: 0.125rem;
+			color: var(--glitch-color);
+
+			&::before {
+				content: attr(data-glitch);
+				position: absolute;
+				top: 0;
+				left: calc(-1 * var(--glitch-offset));
+				width: 100%;
+				color: var(--glitch-color);
+				background-color: var(--glitch-bg-color);
+				overflow: hidden;
+				clip: rect(0, 900px, 0, 0);
+				animation: noise-before calc(var(--glitch-duration) * 33) infinite linear alternate-reverse;
+				filter: blur(var(--glitch-blur));
+			}
+
+			&::after {
+				content: attr(data-glitch);
+				position: absolute;
+				top: 0;
+				left: var(--glitch-offset);
+				width: 100%;
+				color: var(--glitch-color);
+				background-color: var(--glitch-bg-color);
+				overflow: hidden;
+				clip: rect(0, 900px, 0, 0);
+				animation: noise-after calc(var(--glitch-duration) * 22) infinite linear alternate-reverse;
+				filter: blur(var(--glitch-blur));
+			}
+		}
+
+		@keyframes noise-before {
+			0% {
+				clip: rect(calc(61px * var(--glitch-intensity) / 10), 9999px, calc(52px * var(--glitch-intensity) / 10), 0);
+			}
+			5% {
+				clip: rect(calc(33px * var(--glitch-intensity) / 10), 9999px, calc(144px * var(--glitch-intensity) / 10), 0);
+			}
+			10% {
+				clip: rect(calc(121px * var(--glitch-intensity) / 10), 9999px, calc(115px * var(--glitch-intensity) / 10), 0);
+			}
+			15% {
+				clip: rect(calc(144px * var(--glitch-intensity) / 10), 9999px, calc(162px * var(--glitch-intensity) / 10), 0);
+			}
+			20% {
+				clip: rect(calc(62px * var(--glitch-intensity) / 10), 9999px, calc(180px * var(--glitch-intensity) / 10), 0);
+			}
+			25% {
+				clip: rect(calc(34px * var(--glitch-intensity) / 10), 9999px, calc(42px * var(--glitch-intensity) / 10), 0);
+			}
+			30% {
+				clip: rect(calc(147px * var(--glitch-intensity) / 10), 9999px, calc(179px * var(--glitch-intensity) / 10), 0);
+			}
+			35% {
+				clip: rect(calc(99px * var(--glitch-intensity) / 10), 9999px, calc(63px * var(--glitch-intensity) / 10), 0);
+			}
+			40% {
+				clip: rect(calc(188px * var(--glitch-intensity) / 10), 9999px, calc(122px * var(--glitch-intensity) / 10), 0);
+			}
+			45% {
+				clip: rect(calc(154px * var(--glitch-intensity) / 10), 9999px, calc(14px * var(--glitch-intensity) / 10), 0);
+			}
+			50% {
+				clip: rect(calc(63px * var(--glitch-intensity) / 10), 9999px, calc(37px * var(--glitch-intensity) / 10), 0);
+			}
+			55% {
+				clip: rect(calc(161px * var(--glitch-intensity) / 10), 9999px, calc(147px * var(--glitch-intensity) / 10), 0);
+			}
+			60% {
+				clip: rect(calc(109px * var(--glitch-intensity) / 10), 9999px, calc(175px * var(--glitch-intensity) / 10), 0);
+			}
+			65% {
+				clip: rect(calc(157px * var(--glitch-intensity) / 10), 9999px, calc(88px * var(--glitch-intensity) / 10), 0);
+			}
+			70% {
+				clip: rect(calc(173px * var(--glitch-intensity) / 10), 9999px, calc(131px * var(--glitch-intensity) / 10), 0);
+			}
+			75% {
+				clip: rect(calc(62px * var(--glitch-intensity) / 10), 9999px, calc(70px * var(--glitch-intensity) / 10), 0);
+			}
+			80% {
+				clip: rect(calc(24px * var(--glitch-intensity) / 10), 9999px, calc(153px * var(--glitch-intensity) / 10), 0);
+			}
+			85% {
+				clip: rect(calc(138px * var(--glitch-intensity) / 10), 9999px, calc(40px * var(--glitch-intensity) / 10), 0);
+			}
+			90% {
+				clip: rect(calc(79px * var(--glitch-intensity) / 10), 9999px, calc(136px * var(--glitch-intensity) / 10), 0);
+			}
+			95% {
+				clip: rect(calc(25px * var(--glitch-intensity) / 10), 9999px, calc(34px * var(--glitch-intensity) / 10), 0);
+			}
+			100% {
+				clip: rect(calc(173px * var(--glitch-intensity) / 10), 9999px, calc(166px * var(--glitch-intensity) / 10), 0);
+			}
+		}
+
+		@keyframes noise-after {
+			0% {
+				clip: rect(calc(26px * var(--glitch-intensity) / 10), 9999px, calc(33px * var(--glitch-intensity) / 10), 0);
+			}
+			5% {
+				clip: rect(calc(140px * var(--glitch-intensity) / 10), 9999px, calc(198px * var(--glitch-intensity) / 10), 0);
+			}
+			10% {
+				clip: rect(calc(184px * var(--glitch-intensity) / 10), 9999px, calc(89px * var(--glitch-intensity) / 10), 0);
+			}
+			15% {
+				clip: rect(calc(121px * var(--glitch-intensity) / 10), 9999px, calc(6px * var(--glitch-intensity) / 10), 0);
+			}
+			20% {
+				clip: rect(calc(181px * var(--glitch-intensity) / 10), 9999px, calc(99px * var(--glitch-intensity) / 10), 0);
+			}
+			25% {
+				clip: rect(calc(154px * var(--glitch-intensity) / 10), 9999px, calc(133px * var(--glitch-intensity) / 10), 0);
+			}
+			30% {
+				clip: rect(calc(134px * var(--glitch-intensity) / 10), 9999px, calc(169px * var(--glitch-intensity) / 10), 0);
+			}
+			35% {
+				clip: rect(calc(26px * var(--glitch-intensity) / 10), 9999px, calc(187px * var(--glitch-intensity) / 10), 0);
+			}
+			40% {
+				clip: rect(calc(147px * var(--glitch-intensity) / 10), 9999px, calc(137px * var(--glitch-intensity) / 10), 0);
+			}
+			45% {
+				clip: rect(calc(31px * var(--glitch-intensity) / 10), 9999px, calc(52px * var(--glitch-intensity) / 10), 0);
+			}
+			50% {
+				clip: rect(calc(191px * var(--glitch-intensity) / 10), 9999px, calc(109px * var(--glitch-intensity) / 10), 0);
+			}
+			55% {
+				clip: rect(calc(74px * var(--glitch-intensity) / 10), 9999px, calc(54px * var(--glitch-intensity) / 10), 0);
+			}
+			60% {
+				clip: rect(calc(145px * var(--glitch-intensity) / 10), 9999px, calc(75px * var(--glitch-intensity) / 10), 0);
+			}
+			65% {
+				clip: rect(calc(153px * var(--glitch-intensity) / 10), 9999px, calc(198px * var(--glitch-intensity) / 10), 0);
+			}
+			70% {
+				clip: rect(calc(99px * var(--glitch-intensity) / 10), 9999px, calc(136px * var(--glitch-intensity) / 10), 0);
+			}
+			75% {
+				clip: rect(calc(118px * var(--glitch-intensity) / 10), 9999px, calc(192px * var(--glitch-intensity) / 10), 0);
+			}
+			80% {
+				clip: rect(calc(1px * var(--glitch-intensity) / 10), 9999px, calc(83px * var(--glitch-intensity) / 10), 0);
+			}
+			85% {
+				clip: rect(calc(145px * var(--glitch-intensity) / 10), 9999px, calc(98px * var(--glitch-intensity) / 10), 0);
+			}
+			90% {
+				clip: rect(calc(121px * var(--glitch-intensity) / 10), 9999px, calc(154px * var(--glitch-intensity) / 10), 0);
+			}
+			95% {
+				clip: rect(calc(156px * var(--glitch-intensity) / 10), 9999px, calc(44px * var(--glitch-intensity) / 10), 0);
+			}
+			100% {
+				clip: rect(calc(67px * var(--glitch-intensity) / 10), 9999px, calc(122px * var(--glitch-intensity) / 10), 0);
+			}
+		}
+
+
+		@media (max-width: #{$breakpoint-tablet}) {
+			font-size: calc(10px + 4vmin);
 		}
 	}
 
-	@media (max-width: var(--breakpoint-tablet)) {
-        main {
-            font-size: calc(10px + 8vmin);
-            height: auto;
-            min-height: 100vh;
-            padding: 4rem 2rem;
-
-            .logo {
-                flex-direction: column;
-                gap: 0;
-            }
-        }
-    }
 </style>
