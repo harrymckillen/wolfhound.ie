@@ -29,9 +29,10 @@ import Logo from '../components/Logo.astro';
 	}
 	
 	main {
-		width: 100vw;
-		height: 100vh;
 		min-height: 100vh;
+    height: 100vh;
+    height: 100dvh; // Modern browsers support dynamic viewport units
+    box-sizing: border-box;
 		color: var(--color-orange);
 		font-size: calc(10px + 6vmin);
 		font-family: var(--font-family-pixel);
